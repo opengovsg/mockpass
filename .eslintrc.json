@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "@opengovsg/eslint-config-opengovsg"
+  ],
+  "env": {
+    "node": true
+  }
+}

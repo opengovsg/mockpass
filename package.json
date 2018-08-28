@@ -1,0 +1,38 @@
+{
+  "name": "mock-spcp-server",
+  "version": "1.0.0",
+  "description": "A mock SingPass/CorpPass server for dev purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datagovsg/mock-spcp-server.git"
+  },
+  "keywords": [
+    "mock",
+    "test",
+    "singpass",
+    "corppass"
+  ],
+  "author": "Government Technology Agency of Singapore (https://www.tech.gov.sg)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datagovsg/mock-spcp-server/issues"
+  },
+  "homepage": "https://github.com/datagovsg/mock-spcp-server#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "@opengovsg/eslint-config-opengovsg": "^1.0.5",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
