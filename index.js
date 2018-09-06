@@ -12,6 +12,8 @@ if (!assertEndpoint) {
 
 const app = config(express(), {
   assertEndpoint,
+  serviceProviderCertPath:
+    process.env.SERVICE_PROVIDER_CERT_PATH || './static/certs/server.crt',
   showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
 })
 
