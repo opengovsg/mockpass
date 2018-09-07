@@ -30,6 +30,6 @@ const app = config(express(), {
 app.listen(
   PORT,
   err => err
-    ? console.error('Unable to start mock-spcp-server', err)
-    : console.warn(`mock-spcp-server listening on ${PORT}`)
+    ? console.error('Unable to start MockPass', err)
+    : console.warn(`MockPass listening on ${PORT}`)
 )
