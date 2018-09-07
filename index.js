@@ -3,7 +3,7 @@ const express = require('express')
 
 const { config } = require('./lib/express')
 
-const PORT = process.env.PORT || 5156
+const PORT = process.env.MOCKPASS_PORT || 5156
 
 if (!process.env.SINGPASS_ASSERT_ENDPOINT && !process.env.CORPPASS_ASSERT_ENDPOINT) {
   throw new Error('Either SINGPASS_ASSERT_ENDPOINT or CORPPASS_ASSERT_ENDPOINT must be set')
