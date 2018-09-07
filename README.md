@@ -1,2 +1,53 @@
 # MockPass
 A mock SingPass/CorpPass server for dev purposes
+
+## Quick Start
+
+Configure your application to point to the following endpoints:
+SingPass:
+ * http://localhost:5156/singpass/logininitial - login redirect with optional page
+ * http://localhost:5156/singpass/soap - receives SAML artifact and returns assertion
+
+CorpPass:
+ * http://localhost:5156/corppass/logininitial
+ * http://localhost:5156/corppass/soap
+
+Provide your application with the `spcp*` certs found in `static/certs`
+and with application certs at `static/certs/{key.pem|server.crt}`
+
+Alternatively, provide the paths to your app cert as env vars
+`SERVICE_PROVIDER_CERT_PATH` and `SERVICE_PROVIDER_PUB_KEY`
+
+```
+$ npm install @opengovsg/mockpass
+
+# Some familiarity with SAML Artifact Binding is assumed
+# Configure where MockPass should send SAML artifact to
+$ export SINGPASS_ASSERT_ENDPOINT=http://localhost:5000/singpass/assert
+$ export CORPPASS_ASSERT_ENDPOINT=http://localhost:5000/corppass/assert
+
+$ export MOCKPASS_PORT=5156 # Defaults to 5156
+$ export SHOW_LOGIN_PAGE=true # Optional
+
+$ npx mockpass
+MockPass listening on 5156
+```
+
+## Background
+
+There currently is nothing widely available to test an application's integration
+with SingPass/CorpPass using a dev machine alone. This is awkward for developers
+who then need to connect to the staging servers hosted by SingPass/CorpPass,
+which may not always be available (eg, down for maintenance, or no Internet).
+
+MockPass tries to solves this by providing an extremely lightweight implementation
+of a SAML 2.0 Identity Provider that returns mock SingPass and CorpPass assertions.
+It optionally provides a mock login page that (badly) mimics the SingPass/CorpPass
+login experience.
+
+## Contributing
+
+We welcome contributions to code open-sourced by the Government Technology
+Agency of Singapore. All contributors will be asked to sign a Contributor
+License Agreement (CLA) in order to ensure that everybody is free to use their
+contributions.
