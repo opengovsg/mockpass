@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+const fs = require('fs')
 const express = require('express')
+const path = require('path')
 
 const { config } = require('./lib/express')
 
@@ -10,9 +12,9 @@ if (!process.env.SINGPASS_ASSERT_ENDPOINT && !process.env.CORPPASS_ASSERT_ENDPOI
 }
 
 const app = config(express(), {
-  serviceProviderPaths: {
-    cert: process.env.SERVICE_PROVIDER_CERT_PATH || './static/certs/server.crt',
-    pubKey: process.env.SERVICE_PROVIDER_PUB_KEY || './static/certs/key.pub',
+  serviceProvider: {
+    cert: fs.readFileSync(path.resolve(__dirname, process.env.SERVICE_PROVIDER_CERT_PATH || './static/certs/server.crt')),
+    pubKey: fs.readFileSync(path.resolve(__dirname, process.env.SERVICE_PROVIDER_PUB_KEY || './static/certs/key.pub')),
   },
   idpConfig: {
     singPass: {
