@@ -1,6 +1,6 @@
 <UserInfo>
-  <CPUID>S1234567A</CPUID>
-  <CPEntID>123456789G</CPEntID>
+  <CPUID>{{ NRIC }}</CPUID>
+  <CPEntID>{{ UEN }}</CPEntID>
 </UserInfo>
 <AuthAccess>
   <Result_Set>

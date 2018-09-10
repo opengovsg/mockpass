@@ -26,7 +26,11 @@ $ npm install @opengovsg/mockpass
 $ export SINGPASS_ASSERT_ENDPOINT=http://localhost:5000/singpass/assert
 $ export CORPPASS_ASSERT_ENDPOINT=http://localhost:5000/corppass/assert
 
-$ export MOCKPASS_PORT=5156 # Defaults to 5156
+# All values shown here are defaults
+$ export MOCKPASS_PORT=5156
+$ export MOCKPASS_NRIC=S8979373D
+$ export MOCKPASS_UEN=123456789A
+
 $ export SHOW_LOGIN_PAGE=true # Optional
 
 $ npx mockpass
