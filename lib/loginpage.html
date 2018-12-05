@@ -1,4 +1,4 @@
-<DOCTYPEL! html>
+
     <html>
 
         <head>
@@ -9,20 +9,20 @@
                 box-sizing: border-box;
                 margin-left: 25px;
             }
-            #search{
+            #searchBox{
                 border-color: rgb(0, 102, 255)49, 175, 175;
                 color: black;
                 font-size: 20px;
                 width: 92.5%;
                 margin-bottom: 10px;
             }
-            #loginids{
+            #loginIds{
                 padding: 0;
                 list-style-type: none;
                 width:92.5%;
                 
             }
-            #loginids a{
+            #loginIds a{
                 background-color: rgb(154, 185, 231)49, 175, 175;
                 color: black;
                 border: 1px solid;
@@ -34,7 +34,7 @@
                 margin-left: -25px;
                 font-family: Arial, Helvetica, sans-serif;
             }
-            #loginids a:hover:not(.header) {
+            #loginIds a:hover:not(.header) {
                 background-color: rgba(139, 146, 253, 0.774);
             }
         </style>
@@ -44,9 +44,9 @@
                               
             <h1 style= 'color: rgb(0, 0, 204)' >Login IDs</h1>
                     
-            <input type="text" id="search" onkeyup="searchid()" placeholder="Type in an ID" title="Searching for IDs">
+            <input type="text" id="searchBox" onkeyup="searchId()" placeholder="Type in an ID" title="Searching for IDs">
                               
-            <div id="loginids" >
+            <div id="loginIds" >
                 {{#.}}
                     <li><a href = "{{ URL }}">{{ id }}</a></li>
                 {{/.}}
@@ -54,19 +54,19 @@
               
 
         <script>
-            function searchid(){
-                var inpt, filtered, ul_lst, lst, txt, txt_value;
-                inpt = document.getElementById('search')
-                filtered = inpt.value.toUpperCase();
-                ul_lst = document.getElementById("loginids");
-                lst = ul_lst.getElementsByTagName('li');
+            function searchId(){
+                var inpt, filtered, ul_lst, lst, txt, txt_value
+                inpt = document.getElementById('searchBox')
+                filtered = inpt.value.toUpperCase()
+                ul_lst = document.getElementById("loginIds")
+                lst = ul_lst.getElementsByTagName('li')
                     for (var i = 0; i < lst.length; i++){
-                        txt = lst[i].getElementsByTagName('a')[0];
-                        txt_value = txt.textContent || txt.innerText;
+                        txt = lst[i].getElementsByTagName('a')[0]
+                        txt_value = txt.textContent || txt.innerText
                             if (txt_value.toUpperCase().indexOf(filtered) > -1){
-                                lst[i].style.display = "";
+                                lst[i].style.display = ""
                             } else {
-                                lst[i].style.display = "none";
+                                lst[i].style.display = "none"
                             }
                     }
                 }
@@ -75,4 +75,3 @@
         </body>
 
     </html>
-</DOCTYPE>
