@@ -1,6 +1,6 @@
 {
   "name": "@opengovsg/mockpass",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A mock SingPass/CorpPass server for dev purposes",
   "main": "index.js",
   "bin": {
@@ -31,7 +31,7 @@
   "dependencies": {
     "base-64": "^0.1.0",
     "express": "^4.16.3",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "mustache": "^2.3.2",
     "xml-crypto": "^1.0.0",
     "xml-encryption": "^0.11.2",
