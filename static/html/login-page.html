@@ -1,0 +1,73 @@
+
+<html>
+
+  <head>
+    <title>Login Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin-left: 25px;
+        }
+        #search-box {
+            border-color: rgb(0, 102, 255)49, 175, 175;
+            color: black;
+            font-size: 20px;
+            width: 92.5%;
+            margin-bottom: 10px;
+        }
+        #login-ids {
+            padding: 0;
+            list-style-type: none;
+            width:92.5%;
+        }
+        #login-ids a {
+            background-color: rgb(154, 185, 231)49, 175, 175;
+            color: black;
+            border: 1px solid;
+            text-decoration: none;
+            padding:5px;
+            margin-top: -1px;
+            font-size: 15px;
+            display: block;
+            margin-left: -25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #login-ids a:hover:not(.header) {
+            background-color: rgba(139, 146, 253, 0.774);
+        }
+    </style>
+  </head>
+
+  <body>
+                            
+    <h1 style= 'color: rgb(0, 0, 204)' >Login IDs</h1>
+            
+    <input type="text" id="search-box" onkeyup="searchId()" placeholder="Type in an ID" title="Searching for IDs">
+                        
+    <div id="login-ids" >
+      {{#.}}
+        <li><a href = "{{ URL }}">{{ id }}</a></li>
+      {{/.}}
+    </div>
+
+    <script>
+        function searchId(){
+            var searchInput, filteredInput, identityList, identity, idValue
+            searchInput = document.getElementById('searchBox')
+            filteredInput = searchInput.value.toUpperCase()
+            identityList = document.getElementById("loginIds").getElementsByTagName('li')
+            for (var i = 0; i < identityList.length; i++){
+                identity = identityList[i].getElementsByTagName('a')[0]
+                idValue = identity.textContent || identity.innerText
+                if (idValue.toUpperCase().indexOf(filteredInput) > -1){
+                    identityList[i].style.display = ""
+                } else {
+                    identityList[i].style.display = "none"
+                }
+            }
+        }
+    </script>
+
+  </body>
+
+</html>
