@@ -55,7 +55,7 @@
             var searchInput, filteredInput, identityList, identity, idValue
             searchInput = document.getElementById('searchBox')
             filteredInput = searchInput.value.toUpperCase()
-            identityList = document.getElementById("loginIds").getElementsByTagName('li')
+            identityList = document.getElementById("login-ids").getElementsByTagName('li')
             for (var i = 0; i < identityList.length; i++){
                 identity = identityList[i].getElementsByTagName('a')[0]
                 idValue = identity.textContent || identity.innerText
