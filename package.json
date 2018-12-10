@@ -1,6 +1,6 @@
 {
   "name": "@opengovsg/mockpass",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A mock SingPass/CorpPass server for dev purposes",
   "main": "index.js",
   "bin": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/datagovsg/mockpass.git"
+    "url": "git+https://github.com/opengovsg/mockpass.git"
   },
   "keywords": [
     "mock",
@@ -22,9 +22,9 @@
   "author": "Government Technology Agency of Singapore (https://www.tech.gov.sg)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/datagovsg/mockpass/issues"
+    "url": "https://github.com/opengovsg/mockpass/issues"
   },
-  "homepage": "https://github.com/datagovsg/mockpass#readme",
+  "homepage": "https://github.com/opengovsg/mockpass#readme",
   "engines": {
     "node": ">=8.0.0"
   },
