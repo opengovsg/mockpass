@@ -12,6 +12,9 @@ CorpPass:
  * http://localhost:5156/corppass/logininitial
  * http://localhost:5156/corppass/soap
 
+MyInfo:
+ * http://localhost:5156/myinfo/person-basic (exclusive to government systems)
+
 Provide your application with the `spcp*` certs found in `static/certs`
 and with application certs at `static/certs/{key.pem|server.crt}`
 
