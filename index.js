@@ -26,6 +26,7 @@ const app = config(express(), {
       assertEndpoint: process.env.CORPPASS_ASSERT_ENDPOINT,
     },
   },
+  port: PORT,
   showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
 })
 
