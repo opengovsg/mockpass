@@ -30,6 +30,8 @@ const app = config(express(), {
   showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
 })
 
+app.enable('trust proxy')
+
 app.listen(
   PORT,
   err => err
