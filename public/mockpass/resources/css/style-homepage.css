@@ -6,6 +6,13 @@ body {
     background: #fff;
     overflow-x: hidden;
 }
+
+.dropdown-menu{
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
 .sp-img-bg {
     background: url(../../resources/img/background/large-device/sp_bg.jpg) no-repeat bottom; 
     -webkit-background-size: cover;
