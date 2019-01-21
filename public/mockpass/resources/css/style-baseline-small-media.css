@@ -1,0 +1,567 @@
+/*------------------------------------------------
+     Base Build Small Devices Common START
+------------------------------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    /*  ---  Mobile Header Start  --- */
+    #mobile-header {
+        transition: margin-left .5s;
+        padding: 16px 20px;
+        height: 66px;
+        width: 100%;
+        border-bottom: 2px solid #E11F26;
+        background-color: #fff;
+    }
+    .mobile-mockpass-logo {
+        position: relative;
+        top: -5px;
+        height: 49px;
+        padding: 0;
+        width: 122px;
+        background-size: contain;
+        background: url("../../resources/img/logo/mockpass-logo.png");
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    /*  ---  Mobile Header End  --- */
+
+    /*  ---  Main Navigation Start  --- */
+    .mNavigation_container {
+        width: 100%;
+    }
+    .mNavigation_body p {
+        padding: 18px 5px;
+        margin: 0px;
+    }
+    .mNavigation_title {
+        background-color: #111;
+        margin: 0 0 1px 0;
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        border-bottom: 1px solid #17202A;
+    }
+    .mNavigation_title.mDropdown {
+        padding: 8px 8px 8px 32px;
+        font-size: 1.3em;
+    }
+    .mNavigation_body {
+        background: lightgray;
+        padding: 0px 8px 0px 5px;
+        text-decoration: none;
+        font-size: .85em;
+        color: #fff;
+        display: block;
+        transition: .5s;
+        background-color: #17202A;
+    }
+    .mNavigation_body>a {
+        border-bottom: 1px solid #212F3D;
+        font-size: 1.1em;
+    }
+    .plusminus {
+        float: right;
+        position: relative;
+    }
+    .mDropbtn {
+        color: #fff;
+        padding: 0;
+        font-size: 1.5em;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        text-indent: 32px;
+        background-color: #111;
+        height: 40px;
+    }
+    .mDropdown-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    .mDropdown-content {
+        display: none;
+        position: relative;
+        background-color: #17202A;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        font-size: .7em;
+        text-indent: 7px;
+        line-height: 20px;
+    }
+    .mDropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .mDropdown-content a:hover {
+        background-color: #212F3D;
+    }
+    .mDropdown-container:hover .mDropdown-content {
+        display: block;
+    }
+    .mDropdown-container:hover .mDropbtn {
+        background-color: none;
+    }
+    /*  ---  Main Navigation End  --- */
+
+    /*  ---  Side Navigation Start  --- */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: .5s;
+        padding-top: 15px;
+        line-height: 30px;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 1.3em;
+        color: #fff;
+        display: block;
+        transition: .3s;
+    }
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 2.57em;
+        margin-left: 50px;
+        color: #c0c0c0;
+    }
+    /*  ---  Side Navigation End  --- */
+
+    /*  --- Main Footer ---  */
+    .container-wrapper-footer {
+        color: #fff;
+        background-color: #e2dedf;
+        text-align: center;
+        padding: 10px 0 10px;
+        margin: auto;
+        position: absolute;
+        height: 69px;
+    }
+    .footer-terms-condition {
+        text-align: center !important;
+        font-size: 0.75em;
+        color: #000; }
+    .footer-terms-condition a {
+        color: #000; }
+    .footer-copyright {
+        text-align: center !important;
+        padding: 5px 0 0 0;
+        font-size: 0.75em;
+        color: #000;
+        font-weight: normal;
+        color: #000; }
+    /*  --- Main Footer End ---  */
+
+    .commonbody-container {
+        width: 100%;
+        margin: 0 auto 25px auto;
+        padding: 0 20px;
+    }
+    .inner-body-wrapper {
+        padding-bottom: 69px;
+        position: relative;
+    }
+    button.btn-cancel {
+        position: relative;
+        width: 100%;
+        top: 55px;
+        padding: 10px 0px;
+        font-size: 1em;
+    }
+    button.btn-primary {
+        position:relative;
+        width: 100%;
+        top: -50px;
+        padding: 10px 0px;
+        font-size: 1em;
+    }
+    button.single-btn {
+        top: 0px;
+    }
+    .nav-pills>li, .nav-tabs>li {
+        float: left;
+        display: inline-block;
+        zoom: 1;
+        width: 50%;
+    }
+    .modal-open {
+        padding-right: 0px !important;
+    }
+}
+/*------------------------------------------------
+     Base Build Small Devices Common END
+------------------------------------------------ */
+
+/*------------------------------------------------
+   Base Build for Small devices Portrait START
+------------------------------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    body {
+        font-size: 14px;
+        height: initial !important;
+    }
+    .mainbody-wrapper {
+        min-height: 100vh;
+        height: initial;
+        position: relative;
+    }
+    .homepagebody-wrapper {
+        min-height: 792px;
+        height: 100vh;
+        position: relative;
+    }
+    .modal-dialog {
+        width: 100%;
+    }
+}
+/*------------------------------------------------
+   Base Build for Small devices Portrait END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+   Base Build for Small devices Landscape START
+------------------------------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    body {
+        font-size: 14px;
+        height: initial !important;
+    }
+    .mainbody-wrapper {
+        min-height: 680px;
+        height: initial;
+        position: relative;
+    }
+    .homepagebody-wrapper {
+        min-height: 650px;
+        height: 100vh;
+        position: relative;
+    }
+}
+/*------------------------------------------------
+   Base Build for Small devices Landscape END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             Common Large Tablet START
+------------------------------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .homepagebody-wrapper {
+        min-height: 694px;
+        height: 100vh;
+        position: relative;
+    }
+    .mainbody-wrapper {
+        min-height: inherit;
+        height: initial;
+        position: relative;
+    }
+    .landingpagebody-wrapper {
+        min-height: 100vh;
+        height: 100vh;
+        position: relative;
+    }
+    .commonbody-container {
+        width: 100%;
+        margin: 0 auto 25px auto;
+        padding: 0 50px;
+    }
+    .mainHeaderContainer.container.hidden-xs {
+        padding-left: 0px;
+        padding-right: 0px;
+        display: none;
+    }
+
+    /*  ---  Side Navigation Start  --- */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: .5s;
+        padding-top: 15px;
+        line-height: 30px;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 1.3em;
+        color: #fff;
+        display: block;
+        transition: .3s;
+    }
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 2.57em;
+        margin-left: 50px;
+        color: #c0c0c0;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    /*  ---  Mobile Header Start  --- */
+    #mobile-header {
+        transition: margin-left .5s;
+        padding: 16px;
+        height: 66px;
+        width: 100%;
+        border-bottom: 2px solid #E11F26;
+        background-color: #fff;
+    }
+    .mobile-mockpass-logo {
+        position: relative;
+        top: -5px;
+        height: 49px;
+        padding: 0;
+        width: 122px;
+        background: url("../../resources/img/logo/mockpass-logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    .mNavigation_body p {
+        padding: 18px 5px;
+        margin: 0px;
+    }
+    .plusminus {
+        float: right;
+        position: relative;
+    }
+    .mNavigation_title {
+        background-color: #111;
+        margin: 0 0 1px 0;
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        border-bottom: 1px solid #17202A;
+    }
+    .mNavigation_title.mDropdown {
+        padding: 8px 8px 8px 32px;
+        font-size: 1.3em;
+    }
+    .mNavigation_body {
+        background: lightgray;
+        padding: 0px 8px 0px 5px;
+        text-decoration: none;
+        font-size: .85em;
+        color: #fff;
+        display: block;
+        transition: .5s;
+        background-color: #17202A;
+    }
+    .mNavigation_body>a {
+        border-bottom: 1px solid #212F3D;
+        font-size: 1.1em;
+    }
+    /*  ---  Mobile Header END  --- */
+}
+/*------------------------------------------------
+             Common Large Tablet END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             Large Tablet (SIZE: SM) START
+------------------------------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .inner-body-wrapper {
+	    min-height: 650px;
+        padding-bottom: 75px;
+        position: relative;
+    }
+    /*  --- Main Footer ---  */
+    .container-wrapper-footer {
+        color: #fff;
+        background-color: #e2dedf;
+        text-align: center;
+        padding: 10px 0 10px;
+        margin: auto;
+        position: absolute;
+    }
+    .footer-terms-condition {
+        text-align: center !important;
+        padding: 0 0 0 0 !important;
+        width: 100% !important;
+        font-size: 0.75em;
+        color: #000;
+    }
+    .footer-terms-condition a {
+        color: #000;
+    }
+    .footer-copyright {
+        text-align: center !important;
+        padding: 5px 25px 0 0;
+        font-size: 0.75em;
+        color: #000;
+        font-weight: normal;
+    }
+    /*  --- Main Footer End ---  */
+}
+/*------------------------------------------------
+             Large Tablet (SIZE: SM) END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             Large Tablet (SIZE: MD) START
+------------------------------------------------ */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .inner-body-wrapper {
+        padding-bottom: 55px;
+        position: relative;
+    }
+    /*  --- Main Footer ---  */
+    .container-wrapper-footer {
+        color: #fff;
+        background-color: #e2dedf;
+        text-align: center;
+        padding: 20px 0 20px;
+        margin: auto;
+        position: absolute;
+    }
+    .footer-terms-condition {
+        text-align: left;
+        padding: 0;
+        width: 100% !important;
+        font-size: 0.75em;
+        color: #000;
+    }
+    .footer-terms-condition a {
+        color: #000;
+    }
+    .footer-copyright {
+        text-align: right;
+        padding: 0;
+        font-size: 0.75em;
+        color: #000;
+        font-weight: normal;
+    }
+    /*  --- Main Footer End ---  */
+}
+/*------------------------------------------------
+             Large Tablet (SIZE: MD) END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             IPad Portrait 
+------------------------------------------------ */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    .inner-body-wrapper {
+        min-height: 0px;
+        padding-bottom: 75px;
+        position: relative;
+    }
+    button.btn.btn-primary.btn-lg.eailogout-btn.logoutBtn {
+        position: absolute;
+        left: 87%;
+        top: 29px;
+    }
+    /*  --- Main Footer ---  */
+    .container-wrapper-footer {
+        color: #fff;
+        background-color: #e2dedf;
+        text-align: center;
+        padding: 10px 0 10px;
+        margin: auto;
+        position: absolute;
+    }
+    .footer-terms-condition {
+        text-align: center !important;
+        padding: 0 0 0 0 !important;
+        width: 100% !important;
+        font-size: 0.75em;
+        color: #000;
+    }
+    .footer-terms-condition a {
+        color: #000;
+    }
+    .footer-copyright {
+        text-align: center !important;
+        padding: 5px 25px 0 0;
+        font-size: 0.75em;
+        color: #000;
+        font-weight: normal;
+    }
+    /*  --- Main Footer End ---  */
+}
+/*------------------------------------------------
+             IPad Portrait END
+------------------------------------------------ */
+
+/*------------------------------------------------
+             IPad Landscape
+------------------------------------------------ */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+    .inner-body-wrapper {
+        min-height: 0px;
+        padding-bottom: 55px;
+        position: relative;
+    }
+    button.btn.btn-primary.btn-lg.logoutBtn {
+        position: absolute;
+        width: 229px;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        top: 1px;
+        left: unset !important;
+    }
+    /*  --- Main Footer ---  */
+    .container-wrapper-footer {
+        color: #fff;
+        background-color: #e2dedf;
+        text-align: center;
+        padding: 20px 0 20px;
+        margin: auto;
+        position: absolute;
+    }
+    .footer-terms-condition {
+        text-align: left;
+        padding: 0;
+        width: 100% !important;
+        font-size: 0.75em;
+        color: #000;
+    }
+    .footer-terms-condition a {
+        color: #000;
+    }
+    .footer-copyright {
+        text-align: right;
+        padding: 0;
+        font-size: 0.75em;
+        color: #000;
+        font-weight: normal;
+    }
+    /*  --- Main Footer End ---  */
+}
+/*------------------------------------------------
+             IPad Landscape END 
+------------------------------------------------ */
