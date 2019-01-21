@@ -31,6 +31,7 @@ const app = config(express(), {
 })
 
 app.enable('trust proxy')
+app.use(express.static('public'))
 
 app.listen(
   PORT,

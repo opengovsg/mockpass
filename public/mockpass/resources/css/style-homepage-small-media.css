@@ -1,0 +1,588 @@
+/** Last Updated Date : 2018-12-28 11:00 AM  */
+
+/*------------------------------------------------
+     Base Build Small Devices Common START
+------------------------------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    /*  ---  Login Modal Start  --- */
+    .login-modal-content {
+        background-color: #fff;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        margin: 0px;
+    }
+    .innter-form {
+        background-color: #fff;
+        border-radius: 0;
+        padding: 0px 20px;
+        width: 100%;
+        margin: 0px;
+    }
+    .login-form-body {
+        background: transparent;
+        padding: 0px;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .passwordless-field-lbl {
+        text-align: center;
+        display: block;
+        margin: 20px;
+    }
+    .logout-link {
+        padding-top: 5px;
+    }
+    button#loginModelbtn {
+        background-color: #E11F26;
+        border-color: #E11F26;
+        width: 100%;
+        height: 60px;
+        font-size: 1.57em;
+        font-weight: bold;
+        border-radius: 4px;
+        margin: 75px auto;
+    }
+    .modal-backdrop.in {
+        opacity: 0;
+    }
+    .mobiletoken-form {
+        top: 67px;
+        position: relative;
+    }
+    li.mobiletokentab.active {
+        position: relative;
+        width: 50%;
+        top: 0;
+    }
+    button.login-Btn {
+        color: #fff;
+        font-weight: bold;
+        margin: 21px 0 33px;
+    }
+    button.cancel-Btn {
+        margin: 21px 3px 33px;
+    }
+    button.eservicelogin-Btn {
+        margin: 21px 0px 33px
+    }
+    /*  ---  Login Modal End  --- */
+
+    /*  ---  Carousel Common START  ---  */
+    .carousel-container {
+        margin-bottom: 45px;
+    }
+    .carousel-indicators {
+        top: -34px;
+    }
+    .carousel {
+        width: 100%;
+    }
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin: 0px auto;
+        padding: 0px;
+        -webkit-transition: .5s ease-in-out left;
+        -o-transition: .5s ease-in-out left;
+        transition: .5s ease-in-out left;
+    }
+    a.regsp-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-register.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.resetpwd-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-reset-password-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.myinfo-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-my-info-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.updateAcctDetails-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-update-acct-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.changePwd-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-change-pwd-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.viewTransactionHistory-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-view-transaction-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.setUp2Step2FA-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-setup-2fa-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.checkapplication-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-chk-app-status-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.retrieveid-icon {
+        background: url(../../resources/img/carousel/small-device/mobile-retrieve-spid-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    /*  ---  Carousel Common END  ---  */
+}
+/*------------------------------------------------
+     Base Build Small Devices Common END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+     Base Build Small Devices Portrait START
+------------------------------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    .sp-img-bg {
+        background: url(../../resources/img/background/small-device/mobile-sp-bg.jpg) no-repeat bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: calc(100vh - 69px);
+        position: relative;
+        min-height: 723px;
+    }
+
+    /* Carousel START*/
+    a.right.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 66px;
+        right: 0px;
+        font-size: 24px;
+    }
+    a.left.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 66px;
+        left: -2px;
+        font-size: 24px;
+    }
+    /* Carousel END*/
+
+    .loginbtn-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .btn-login {
+        height: 47px !important;
+    }
+    .homepageLogin.modal-dialog {
+        margin: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 0px;
+        width: 100%;
+        top: 148px;
+    }
+    .eserviceLoginForm.modal-dialog {
+        margin: 0px;
+        left:0px;
+        right: 0px;
+        padding: 0px;
+        height: unset;
+        width: 100%;
+    }
+    #myModalHorizontal {
+        position:absolute;
+        margin: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+/*------------------------------------------------
+     Base Build Small Devices Portrait END
+------------------------------------------------ */
+
+/*------------------------------------------------
+    Base Build Small Devices Landscape START
+------------------------------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    .sp-img-bg {
+        background: url(../../resources/img/background/small-device/mobile-landscape-sp-bg.jpg) no-repeat bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: calc(100% - 69px);
+        height: unset;
+        position: relative;
+    }
+
+    /* Carousel START*/
+    a.right.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 66px;
+        right: 0px;
+        font-size: 24px;
+    }
+    a.left.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 66px;
+        left: -2px;
+        font-size: 24px;
+    }
+    /* Carousel END*/
+
+    .homepageLogin.modal-dialog {
+        right: 0;
+        width: 100%;
+        top: 148px;
+    }
+   .eserviceLoginForm.modal-dialog {
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0 0;
+    }
+    .loginbtn-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #myModalHorizontal {
+        position:absolute;
+        margin: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 0px !important;
+        width: 100%;
+    }
+}
+/*------------------------------------------------
+    Base Build Small Devices Landscape END
+------------------------------------------------ */
+
+
+
+/*------------------------------------------------
+             Common Large Tablet START
+------------------------------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .homepageLogin.modal-dialog {
+        right: 0px;
+        margin: 0 2%;
+    }
+    .eserviceLoginForm.modal-dialog {
+        top: 10px;
+        right: 0px;
+        margin: 0 1%;
+    }
+    .loginbtn-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    button#loginModelbtn {
+        background-color: #E11F26;
+        border-color: #E11F26;
+        width: 219px;
+        height: 46px;
+        font-size: 1.57em;
+        font-weight: bold;
+        border-radius: 4px;
+        left: -14px;
+        position: relative;
+    }
+
+    /*  ---  Carousel Common START  ---  */
+    .carousel {
+        width: 100%;
+    }
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin: 0px auto;
+        padding: 0px;
+        -webkit-transition: .5s ease-in-out left;
+        -o-transition: .5s ease-in-out left;
+        transition: .5s ease-in-out left;
+    }
+    a.regsp-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-register-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.setup2fa-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-setup-2fa-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.resetpwd-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-reset-password-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.myinfo-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-my-info-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.updateAcctDetails-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-update-acct-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.changePwd-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-change-pwd-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.viewTransactionHistory-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-view-transaction-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.setUp2Step2FA-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-setup-2fa-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.checkapplication-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-app-status.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    a.retrieveid-icon {
+        background: url(../../resources/img/carousel/medium-device/ipad-retrieve-spid-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    /*  ---  Carousel Common END  ---  */
+}
+/*------------------------------------------------
+             Common Large Tablet END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             Large Tablet  (Portrait - SM) START
+------------------------------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .sp-img-bg {
+        background: url(../../resources/img/background/medium-device/ipad-bg.jpg) no-repeat bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: unset;
+        min-height: calc(100% - 75px);
+        position: relative;
+    }
+
+    /* Carousel START*/
+    .carousel-container {
+        margin-bottom: 75px;
+    }
+    a.right.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        font-size: 24px;
+    }
+    a.left.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        left: 15px;
+        font-size: 24px;
+    }
+    /* Carousel END*/
+}
+
+/*------------------------------------------------
+             Large Tablet (Portrait - SM) END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             Large Tablet  (Landscape - SM) START
+------------------------------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+    .sp-img-bg {
+        background: url(../../resources/img/background/medium-device/ipad-landscape-sp-bg.jpg) no-repeat bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: unset;
+        min-height: calc(100% - 75px);
+        position: relative;
+    }
+
+    /* Carousel START*/
+    .carousel-container {
+        margin-bottom: 75px;
+    }
+    a.right.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        font-size: 24px;
+    }
+    a.left.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        left: 15px;
+        font-size: 24px;
+    }
+    /* Carousel END*/
+}
+
+/*------------------------------------------------
+             Large Tablet (Portrait - SM) END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             Large Tablet (Landscape - MD) START
+------------------------------------------------ */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .sp-img-bg {
+        background: url(../../resources/img/background/medium-device/ipad-landscape-sp-bg.jpg) no-repeat bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: calc(100% - 55px);
+        position: relative;
+    }
+
+    /* Carousel START*/
+    .carousel-container {
+        margin-bottom: 55px;
+    }
+    a.right.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        font-size: 24px;
+    }
+    a.left.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        font-size: 24px;
+    }
+    /* Carousel END*/
+}
+
+/*------------------------------------------------
+             Large Tablet (Landscape) END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             IPad Portrait START
+------------------------------------------------ */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    .sp-img-bg {
+        background: url(../../resources/img/background/medium-device/ipad-bg.jpg) no-repeat bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: calc(100vh - 75px);
+        position: relative;
+    }
+    .login-modal-content {
+        background-color: transparent;
+        width: 400px;
+    }
+    /* Carousel START*/
+    .carousel-container {
+        margin-bottom: 75px;
+    }
+    a.right.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        font-size: 24px;
+    }
+    a.left.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        left: 15px;
+        font-size: 24px;
+    }
+    /* Carousel END*/
+}
+/*------------------------------------------------
+             IPad Portrait END
+------------------------------------------------ */
+
+/*------------------------------------------------
+             IPad Landscape START
+------------------------------------------------ */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+
+    .sp-img-bg {
+        background: url(../../resources/img/background/medium-device/ipad-landscape-sp-bg.jpg) no-repeat bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: calc(100vh - 55px);
+        position: relative;
+    }
+
+    /* Carousel START*/
+    .carousel-container {
+        margin-bottom: 55px;
+    }
+    a.right.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        font-size: 24px;
+    }
+    a.left.carousel-control {
+        text-decoration: none !important;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        font-size: 24px;
+    }
+    /* Carousel END*/
+    
+  
+}
+/*------------------------------------------------
+             IPad Landscape END
+------------------------------------------------ */

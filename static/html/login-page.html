@@ -1,73 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <meta charset="utf-8"> -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="MockPass is a mock SingPass/CorpPass server for dev purposes.">
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+        <link rel="icon" type="img/ico" href="/mockpass/resources/img/favicon.ico">
+        <title>MockPass Login</title>
+        <link rel="stylesheet" type="text/css" href="/mockpass/resources/plugins/bootstrap-3.3.6/css/bootstrap.min.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/mockpass/resources/css/style-main.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/mockpass/resources/css/common.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/mockpass/resources/css/animate.css" media="all">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/mockpass/resources/js/login-common.js"></script>
+    </head>
+    <body>
+        <div class="homepagebody-wrapper">
+            <div class="sp-img-bg">
+                <div class="container-wrapper-header">
+                    <div class="announcement-container" >
+                        <div class="container">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="row">
+                                    <div class="alert alert-info alert-labeled">
+                                        <div class="alert-labeled-row">
+                                            <span class="alert-label alert-label-left alert-labelled-cell"></span>
+                                            <p class="alert-body alert-body-right alert-labelled-cell">
+                                                <span class="announcement-title">Advisory Note</span>
+                                                <br/>
+                                                <span class="announcement-body">
+                                                    Your MockPass account contains a lot of personal data. Do not share your username, password and 2FA details with anyone.
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="mainHeaderContainer container hidden-xs hidden-sm hidden-md">
+                        <div class="mockpass-logo-container pull-left"> <a title="MockPass" aria-label="MockPass" class="mockpass-logo">MockPass</a> </div>
+                        <div class="placeholder-logo-container pull-right hidden-xs">
+                            <a target="_blank" rel="noopener noreferrer" class="placeholder-logo" title="MockPass" aria-label="MockPass">MockPass</a>
+                        </div>
+                        <div class="header-links hidden-xs">
+                            <div class="header-utility pull-left">
+                                <ul>
+                                    <li><a id="font-small" title="Decrease the font size" aria-label="Decrease the font size"><i class="icon font-size font-small-black"></i></a></li>
+                                    <li><a id="font-default" title="Reset the font size" aria-label="Reset the font size"><i class="icon font-size font-default-black"></i></a></li>
+                                    <li><a id="font-large" title="Increase the font size" aria-label="Increase the font size"  ><i class="icon font-size font-large-black"></i></a></li>
+                                    <li><a title="Print this page" aria-label="Print this page"><i class="icon printer-icon-black"></i></a></li>
+                                </ul>
+                            </div>
+                            <ul>
+                                <li class="isicon"><a class="li-links">Contact Us</a></li>|
+                                <li class="isicon"><a class="li-links">Feedback</a></li>|
+                                <li class="isicon"><a class="li-links" >Sitemap</a></li>|
+                                <li class="isicon"><a class="li-links">FAQ</a></li>
+                                <li><a id="searchIcon" title="Search within MockPass" aria-label="Search within MockPass" class="search-icon-black search-form-tigger" data-toggle="search-form"></a></li>
+                            </ul>
+                        </div>
+                        <div class="search-form-wrapper">
+                            <div id="searchFormDiv" class="search-form-div">
+                                <form class="search-form">
+                                    <div class="input-group">
+                                        <input type="text" id="searchtxt" name="search" autocomplete="off" class="search form-control" placeholder="Search">
+                                        <span id="searchFormSubmitBtn" class="input-group-addon" style="font-size: 17px;"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                        <span class="input-group-addon search-close" style="font-size: 19px;"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mySidenav" class="sidenav hidden-lg">
+                        <a class="closebtn" data-toggle="nav-toggle"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                        <div class="mNavigation_container">
+                            <a class="mNavigation_title">Home</a>
+                            <a class="mNavigation_title">About Us</a>
+                            <div class="mNavigation_title mDropdown">My Account<span class="plusminus">+</span></div>
+                            <div class="mNavigation_body" style="display: none;">
+                                <a class="mNavigation_title">Update Profile</a>
+                                <a class="mNavigation_title">Change Password</a>
+                                <a class="mNavigation_title">View History</a>
+                                <a class="mNavigation_title">Set up 2FA</a>
+                                <a class="mNavigation_title">Visit MyInfo</a>
+                            </div>
+                            <div class="mNavigation_title mDropdown">Services<span class="plusminus">+</span></div>
+                            <div class="mNavigation_body" style="display: none;">
+                                <a class="mNavigation_title">Register for MockPass</a>
+                                <a class="mNavigation_title">Check Status</a>
+                                <a class="mNavigation_title">Reset Password</a>
+                                <a class="mNavigation_title">Forgot MockPass ID</a>
+                            </div>
+                            <a class="mNavigation_title">Help and FAQ</a>
+                            <a class="mNavigation_title">Instructional Guides</a>
+                            <a class="mNavigation_title">Counter Locations</a>
+                            <a class="mNavigation_title">News</a>
+                            <a class="mNavigation_title">Contact Us</a>
+                            <a class="mNavigation_title">Sitemap</a>
+                        </div>
+                    </div>
+                    <div id="mobile-header" class="hidden-lg">
+                        <span style="font-size:30px; cursor:pointer; float:left" data-toggle="nav-toggle"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                        <span class="mobile-mockpass-logo visible-xs visible-xs visible-sm visible-md hidden-lg" title="MockPass" aria-label="MockPass"></span>
+                    </div>
+                </div>
+                <div class="container-wrapper-navigator">
+                    <div class="container-navigator">
+                        <nav class="navbar sidebar hidden-xs hidden-sm hidden-md visible-lg" role="navigation">
+                            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="aboutuslist sidebarlist"><a class="listtitle" title="About MockPass" aria-label="About MockPass" >About Us<span  class="hidden-xs showopacity sidebar-aboutusIcon"></span></a></li>
+                                    <li class="faqlist sidebarlist"><a class="listtitle" title="Frequently Asked Questions (FAQ)" aria-label="Frequently Asked Questions (FAQ)" >FAQ<span  class=" hidden-xs showopacity sidebar-faqIcon"></span></a></li>
+                                    <li class="instructvideolist sidebarlist"><a class="listtitle" title="Instructional Guides for MockPass" aria-label="Instructional Guides for MockPass"  >Instructional Guides<span class="hidden-xs showopacity sidebar-videoIcon"></span></a></li>
+                                    <li class="counterlocationlist sidebarlist"><a class="listtitle" title="MockPass Counter Locations" aria-label="MockPass Counter Locations"  >Counter Locations<span  class="hidden-xs showopacity sidebar-counterlocationIcon"></span></a></li>
+                                    <li class="newslist sidebarlist"><a class="listtitle" title="News about MockPass" aria-label="News about MockPass"  >News<span  class="hidden-xs showopacity  sidebar-newsIcon"></span></a></li>
+                                    <li class="contactuslist sidebarlist"><a class="listtitle" title="Contact MockPass" aria-label="Contact MockPass"  >Contact Us<span  class="hidden-xs showopacity  sidebar-contactusIcon"></span></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="homepagebody-container">
+                        <div class="loginbtn-container visible-xs visible-sm visible-md">
+                            <div class="login-button">
+                                <button id="loginModelbtn" class="btn btn-primary btn-lg btn-login" data-toggle="modal" data-target="#myModalHorizontal" onclick="showLoadTab()">Login  <i class="fa fa-lock" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="container visible-lg">
+                            <div class="login-button">
+                                <button id="loginModelbtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal" onclick="showLoadTab()">Login  <i class="fa fa-lock" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div id="myModalHorizontal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="homepageLogin modal-dialog">
+                                <div class="login-modal-content" style="overflow: visible">
 
-<html>
+                                    <div class="login-form-body">
+                                        <span id="sp-mobile-tooltip" class="sp-mobile-tooltip ani-rotate">Click here to log in with MockPass Mobile app</span>
+                                        <ul class="final-login">
+                                            <li id="loginli" class="logintab active">
+                                                <a title="Login" aria-label="Login" data-toggle="tab" href="#sectionA"></a>
+                                            </li>
+                                            <li id="qrcodeloginli" class="qrtab">
+                                                <a title="MockPass Mobile" aria-label="MockPass Mobile" data-toggle="tab" href="#sectionB"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="white-area"></div>
+                                        <div class="tab-content">
+                                            <div id="sectionA" class="tab-pane fade in active">
+                                                <div class="innter-form">
+                                                    <form id="login" name="LoginForm" class="innate-form" method="post">
+                                                        <div id="LoginForm">
+                                                            <div class="login-label">Log in</div>
+                                                            <br>
+                                                            <div class="dropdown" style="width: 100%; ">
+                                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
+                                                                Select username
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    {{#.}}
+                                                                        <li><a href = "{{ assertURL }}">{{ id }}</a></li>
+                                                                    {{/.}}
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="clearfix"></div>
+                                                            <div class="login__footer">
+                                                                <div class="login-note">
+                                                                     Forgot <a aria-label="Forgot MockPass ID">MockPass ID</a> or <a aria-label="Forgot password">password</a>?
+                                                                </div>
+                                                                <div class="sp-reglink">
+                                                                    Don't have an account? <a aria-label="Register now">Register now</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-  <head>
-    <title>Login Page</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin-left: 25px;
-        }
-        #search-box {
-            border-color: rgb(0, 102, 255)49, 175, 175;
-            color: black;
-            font-size: 20px;
-            width: 92.5%;
-            margin-bottom: 10px;
-        }
-        #login-ids {
-            padding: 0;
-            list-style-type: none;
-            width:92.5%;
-        }
-        #login-ids a {
-            background-color: rgb(154, 185, 231)49, 175, 175;
-            color: black;
-            border: 1px solid;
-            text-decoration: none;
-            padding:5px;
-            margin-top: -1px;
-            font-size: 15px;
-            display: block;
-            margin-left: -25px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #login-ids a:hover:not(.header) {
-            background-color: rgba(139, 146, 253, 0.774);
-        }
-    </style>
-  </head>
+                                                    <div>
 
-  <body>
-                            
-    <h1 style= 'color: rgb(0, 0, 204)' >Login IDs</h1>
-            
-    <input type="text" id="search-box" onkeyup="searchId()" placeholder="Type in an ID" title="Searching for IDs">
-                        
-    <div id="login-ids" >
-      {{#.}}
-        <li><a href = "{{ assertURL }}">{{ id }}</a></li>
-      {{/.}}
-    </div>
+                                                    <input type="hidden" name="CSRFToken" value="null" />
+                                                    </div>
+                                                    </form>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
 
-    <script>
-        function searchId(){
-            var searchInput, filteredInput, identityList, identity, idValue
-            searchInput = document.getElementById('searchBox')
-            filteredInput = searchInput.value.toUpperCase()
-            identityList = document.getElementById("login-ids").getElementsByTagName('li')
-            for (var i = 0; i < identityList.length; i++){
-                identity = identityList[i].getElementsByTagName('a')[0]
-                idValue = identity.textContent || identity.innerText
-                if (idValue.toUpperCase().indexOf(filteredInput) > -1){
-                    identityList[i].style.display = ""
-                } else {
-                    identityList[i].style.display = "none"
-                }
-            }
-        }
-    </script>
+                                            <div id="sectionB" class="tab-pane fade in">
+                                                <div class="innter-form">
+                                                    <form id="qrcodelogin" name="qrcodelogin" class="innate-form">
+                                                        <!--- TODO TL: to create the view after the confirmation-->
+                                                        <div id="QRCodeLogin">
+                                                              <div class="qr__wrapper">
+                                                                <div class="qr-main">
+                                                                    <div class="qr-image">
+                                                                        <a id="qrcodelink" data-loading-screen-timeout="getQRValidityTime()">
+                                                                            <img id="qrImage" src="" alt="" />
+                                                                            <img class="qr-logo-overlay" src="/mockpass/resources/img/logo/qr-logo-overlay.svg" />
+                                                                        </a>
+                                                                        <img src="/mockpass/resources/img/sp-mobile.png"
+                                                                         alt="" class="qr-image__success"/>
+                                                                        <div class="text-center qr-error qr-error--expired">QR CODE HAS<br>EXPIRED</div>
+                                                                        <div class="text-center qr-error qr-error--cant-gen">Sorry, we couldn't<br>generate a QR code.</div>
+                                                                        <div class="text-center qr-error qr-error--suspended">
+                                                                            Sorry, we are unable to verify your account.
+                                                                            <span>Please contact the MockPass helpdesk for more information.</span>
+                                                                        </div>
+                                                                        <div class="text-center qr-error qr-error--locked">
+                                                                            Sorry, we are unable to verify your account.
+                                                                            <span>Please reset your password and try again.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="qr-label__wrapper">
+                                                                         <div class="qr-label qr-label--main text-center">SCAN WITH MOCKPASS MOBILE<br>APP TO LOG IN</div>
+                                                                         <div class="qr-label qr-label--success text-center">ALLOW QR LOGIN ON<br>MOCKPASS MOBILE</div>
+                                                                    </div>
+                                                                    <button type="button" class="qr-refresh-btn form-control" onclick="refreshQRCode()"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>&nbsp;Refresh QR code</button>
+                                                                    <button type="button" class="qr-get-new-qr-btn form-control" onclick="refreshQRCode()"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>&nbsp;Get new QR code</button>
+                                                                </div>
+                                                                <div class="qr-unavailable">
+                                                                    <img src="/mockpass/resources/img/sp-qr-unavailable.png" alt=""/>
+                                                                    <div class="qr-label text-center">Sorry, QR login is temporarily unavailable.</div>
+                                                                    <div class="qr-label qr-label--small text-center">Please log in with your MockPass ID and password.</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="login__footer">
+                                                                <div class="login-note text-center">
+                                                                    <p class="note">
+                                                                        Don't have MockPass Mobile? <a target="_blank">Find out more here</a>
+                                                                    </p>
+                                                                    <p class="userguide">
+                                                                        View instructional guide for <a aria-label="User guide for iOS." target="_blank">iOS</a> or <a aria-label="User guide for Android." target="_blank">Android</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <div class="container">
+                    <div id="Carousel" class="carousel slide">
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3"><a class="thumbnail regsp-icon" title="Register for a MockPass account" aria-label="Register for a MockPass account"></a></div>
+                                <div class="col-xs-4 col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail updateAcctDetails-icon" title="Update your MockPass account details" aria-label="Update your MockPass account details" data-toggle="modal" data-target="#myModalHorizontal" ></a></div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3"><a class="thumbnail resetpwd-icon" title="Reset your MockPass password" aria-label="Reset your MockPass password"></a></div>
+                                <div class="hidden-xs col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail setUp2Step2FA-icon" title="Set up your MockPass Two-Factor Authentication (2FA)" aria-label="Set up your MockPass Two-Factor Authentication (2FA)" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a class="thumbnail setUp2Step2FA-icon" title="Set up your MockPass Two-Factor Authentication (2FA)" aria-label="Set up your MockPass Two-Factor Authentication (2FA)" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3"><a title="Check your MockPass application status" aria-label="Check your MockPass application status" class="thumbnail checkapplication-icon"></a></div>
+                                <div class="col-xs-4 col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail changePwd-icon" title="Change your MockPass password" aria-label="Change your MockPass password" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
+                                <div class="hidden-xs col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail viewTransactionHistory-icon" title="View your MockPass transaction history" aria-label="View your MockPass transaction history" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
+                                <div class="hidden-xs col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail myinfo-icon" title="Visit MyInfo Portal" aria-label="Visit MyInfo Portal"></a></div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a class="thumbnail viewTransactionHistory-icon" title="View your MockPass transaction history" aria-label="View your MockPass transaction history" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
+                                <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a title="Visit MyInfo Portal" aria-label="Visit MyInfo Portal" class="thumbnail myinfo-icon"></a></div>
+                                <div class="col-xs-4 col-sm-12 col-md-12 col-lg-12"><a class="thumbnail retrieveid-icon" title="Retrieve your MockPass user ID" aria-label="Retrieve your MockPass user ID"></a></div>
+                            </div>
+                        </div>
+                        <!-- carousel-control -->
+                        <a title="Carousel previous" aria-label="Carousel previous" data-slide="prev" class="left carousel-control glyphicon glyphicon-triangle-left"></a>
+                        <a title="Carousel next" aria-label="Carousel next" data-slide="next" class="right carousel-control glyphicon glyphicon-triangle-right"></a>
 
-  </body>
-
+                        <ol class="carousel-indicators">
+                            <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#Carousel" data-slide-to="1"></li>
+                            <li data-target="#Carousel" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="container-wrapper-footer">
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="footer-terms-condition"> <a>Privacy Statement</a> | <a>Terms of Use</a> | <a>Rate This Website</a> </div>
+                </div>
+                <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
+                    <div class="footer-copyright">Last updated on 13 January 2019 &nbsp; &nbsp; &#169; &nbsp;2018 MockPass</div>
+                </div>
+                <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
+                    <div class="footer-copyright">Last updated on 13 January 2019</div>
+                </div>
+                <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
+                    <div class="footer-copyright">&#169; &nbsp;2018 MockPass</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
 </html>

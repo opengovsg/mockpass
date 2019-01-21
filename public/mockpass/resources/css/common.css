@@ -1,0 +1,121 @@
+/*------------------------------------------------
+            LOADING SCREEN START
+------------------------------------------------ */
+.loading-screen-wrappper {
+    background-color: #000;
+    position: fixed;
+    height: 100%;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+.loading-screen-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loader-title {
+    width: 300px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin: auto;
+    text-align: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #ff0000;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*------------------------------------------------
+            LOADING SCREEN END
+------------------------------------------------ */
+
+/*------------------------------------------------
+            PASSWORD COMPLEXITY START
+------------------------------------------------ */
+.password-complexity-checker-wrapper {
+    position: relative;
+}
+
+.pwd-complexity-hidden {
+    display: none;
+}
+
+.pwd-complexity-info {
+    border: 1px solid #a4a4a4;
+    background-color: #fff;
+    position: absolute;
+    z-index: 61;
+    font-size: 14px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.pc-form-success {
+    color: #2fa13e;
+    padding-right: 3px;
+    font-size: inherit;
+    vertical-align: top;
+}
+
+.pc-form-error {
+    color: #cf2010;
+    padding-right: 3px;
+    font-size: inherit;
+    vertical-align: top;
+}
+
+.pc-form-error .icon-exclamation, .pc-form-success .icon-exclamation {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+    background: url("../img/pwd-complexity-icon-0a8ed77b6b99b6fd7cf2206943de1612.png");
+}
+
+.pc-form-success .icon-exclamation {
+    background-position: -16px 0;
+}
+
+.pwd-complexity-info>p {
+    margin: 0 0 5px 0;
+}
+
+.pwd-complexity-info>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-size: 12px;
+}
+
+input.password-error {
+    border: 1px solid red;
+}
+/*------------------------------------------------
+            PASSWORD COMPLEXITY END
+------------------------------------------------ */

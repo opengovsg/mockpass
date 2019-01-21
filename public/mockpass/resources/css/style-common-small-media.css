@@ -1,0 +1,156 @@
+/*------------------------------------------------
+     Base Build Small Devices Common START
+------------------------------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .trilinebreak {
+        margin: 3em 0;
+        line-height: 5em;
+    }
+    .noPageTitleContainer {
+        position: relative;
+        margin: 25px auto 25px auto;
+    }
+    .breadcrumb {
+        color: #2a2d33;
+        font-weight: normal;
+        background-color: #fff;
+        text-align: left;
+        vertical-align: middle;
+        list-style: none;
+        padding: 5px 0 0 10px;
+        height: 36px;
+        margin-bottom: 0;
+        font-size: .75em !important;
+    }
+    .form-horizontal .control-label {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-bottom: 0;
+        text-align: right;
+        font-weight: normal;
+        top: 0px;
+    }
+    .btn-wrapper {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .error-page-title {
+        color: #E11F26;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 55px 0px 60px 0px;
+        line-height: 22px;
+    }
+    .pageerror-img-icon {
+        height: 95px;
+        width: 95px;
+        float: left;
+        margin: 30px 10px 0px 0px;
+        background-image: url(../../resources/img/message-icons-73f308d85125c45f0eb1579ae865de94.png);
+        background-position: 0px -5px;
+        background-size: 310px;
+    }
+
+    .announcement-container {
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    /* Page Notification START */
+    .error-page-notification-wrapper {
+        margin: 25px -9999rem 0px -9999rem;
+        padding: 20px 9999rem;
+        background: #fef7f7;
+        color: #2a2d33;
+    }
+    .info-page-notification-wrapper {
+        margin: 25px -9999rem 0px -9999rem;
+        padding: 20px 9999rem;
+        background: #ccf2f6;
+        color: #2a2d33;
+    }
+    /* Page Notification END */
+
+    .primary-heading {
+        font-size: 1.5em;
+        color: #2a2d33;
+        font-weight: bold;
+        padding: 30px 0 30px 0px;
+    }
+    .confirmation-body-wrapper {
+        height: auto;
+        width: 100%;
+        margin: 40px 0px 0px 0px;
+    }
+    .letter-content {
+        line-height: 1.25 !important;
+        margin: 0px 0px 50px 0px;
+    }
+    .error-mobile-token-notification-wrapper, .info-mobile-token-notification-wrapper {
+        margin-top: 15px;
+    }
+    .error-content {
+	    padding-left: 0px;
+    }
+    .icon-img-success {
+        height: 44px;
+        width: 44px;
+        background: url(../../resources/img/message-icons-73f308d85125c45f0eb1579ae865de94.png) no-repeat -95px;
+        background-size: cover;
+    }
+    .success-page-notification-wrapper {
+	    margin: 20px -9999rem 0px -9999rem;
+	}
+	.success-page-notification-msg {
+        padding: 0 0 0 10px;
+    }
+}
+/*------------------------------------------------
+     Base Build Small Devices Common END
+------------------------------------------------ */
+
+
+
+/*------------------------------------------------
+             Common Large Tablet START
+------------------------------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .noPageTitleContainer {
+        position: relative;
+        margin: 25px auto 50px auto;
+    }
+    .error-content {
+	    padding-left: 113px;
+	}
+}
+/*------------------------------------------------
+             Common Large Tablet END
+------------------------------------------------ */
+
+
+/*------------------------------------------------
+             IPad Portrait 
+------------------------------------------------ */
+@media only screen and (device-width: 768px) and (device-width: 1024px) and (orientation: portrait) {
+    .alert-labelled-cell {
+        padding: 10px 5px;
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 20px;
+    }
+   .error-content {
+	    padding-left: 113px;
+	}
+}
+/*------------------------------------------------
+             IPad Portrait END
+------------------------------------------------ */
+
+/*------------------------------------------------
+             IPad Landscape
+------------------------------------------------ */
+@media only screen and (device-width: 768px) and (device-width: 1024px) and (orientation: landscape) {
+    .error-content {
+	    padding-left: 113px;
+	}
+}

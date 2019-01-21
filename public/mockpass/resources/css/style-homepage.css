@@ -1,0 +1,667 @@
+/** Last Updated Date : 2018-12-28 11:00 AM  */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #2a2d33;
+    background: #fff;
+    overflow-x: hidden;
+}
+.sp-img-bg {
+    background: url(../../resources/img/background/large-device/sp_bg.jpg) no-repeat bottom; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: calc(100vh - 55px);
+    position: relative;
+    min-height: 675px;
+}
+
+/* Login Modal START */
+#myModalHorizontal {
+    position:absolute;
+    margin: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0px !important;
+    width: 100%;
+    height: 100%;
+}
+
+#cr_fonts_frame {
+	position: absolute;
+}
+
+.homepageLogin.modal-dialog {
+    position: relative;
+    top: 168px;
+    margin: 0px;
+    right: 3%;
+    float: right;
+}
+.eserviceLoginForm.modal-dialog {
+    position: relative;
+    margin: 0;
+}
+.eserviceLoginForm.st-login.modal-dialog .login-form-body {
+	margin: 85px 0 15px;
+}
+.eserviceLoginForm.st-login.modal-dialog .modal-content{
+	border-radius: 0;
+}
+.singpass-mobile-tab-note {
+    text-align: center;
+    font-size: 0.875em;
+    display: block;
+    margin: 10px 10px 10px 10px;
+}
+.passwordless-field-lbl {
+    text-align: center;
+    font-size: 0.875em;
+    display: block;
+}
+/* Login Modal END */
+
+/* Login Modal Tooltip START */
+.sp-mobile-tooltip {
+    line-height: 13.5px;
+    transform-origin: calc(100% + 20px) center;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    font-size: 12px;
+    max-width: 155px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ED1C2E;
+    color: white;
+    right: 92px;
+    top: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+.sp-mobile-tooltip::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    border-left: 20px solid #ed1c2e;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+}
+/* Login Modal Tooltip END */
+
+/* Carousel START */
+.carousel-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 55px;
+}
+.carousel-indicators {
+    top: -15px;
+    position: relative;
+    margin: 0 0 0 0;
+    left: 0;
+    width: 100%;
+    padding: 0px;
+}
+.carousel {
+    position: relative;
+    width: 80%;
+    height : 100%;
+    margin: 0 auto;
+    left: 0px;
+    top: 0px;
+}
+a.right.carousel-control {
+    text-decoration: none !important;
+    position: absolute;
+    top: 60px;
+    right: -20px;
+    font-size: 40px;
+    opacity: 1;
+}
+a.left.carousel-control {
+    text-decoration: none !important;
+    position: absolute;
+    top: 60px;
+    left: -20px;
+    font-size: 40px;
+    opacity: 1;
+}
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none !important;
+}
+.carousel-control {
+    left: -12px;
+    height: 40px;
+    width: 40px;
+    font-size: 3em;
+    background: none;
+    border: none;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 0px;
+    opacity: 1;
+}
+a.regsp-icon, a.setup2fa-icon, a.resetpwd-icon, a.myinfo-icon, a.updateAcctDetails-icon,
+    a.changePwd-icon, a.viewTransactionHistory-icon, a.setUp2Step2FA-icon,
+    a.checkapplication-icon, a.retrieveid-icon {
+    width: auto;
+    height: 200px;
+    margin: 0 auto 0 auto;
+}
+a.regsp-icon {
+    background: url(../../resources/img/carousel/large-device/register-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.setup2fa-icon {
+    background: url(../../resources/img/carousel/large-device/how-to-setup-2fa-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.resetpwd-icon {
+    background: url(../../resources/img/carousel/large-device/reset-password-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.myinfo-icon {
+    background: url(../../resources/img/carousel/large-device/my-info-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.updateAcctDetails-icon {
+    background: url(../../resources/img/carousel/large-device/update-acct-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.changePwd-icon {
+    background: url(../../resources/img/carousel/large-device/change-pwd-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.viewTransactionHistory-icon {
+    background: url(../../resources/img/carousel/large-device/view-transaction-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.setUp2Step2FA-icon {
+    background:
+        url(../../resources/img/carousel/large-device/setup-2fa-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.checkapplication-icon {
+    background: url(../../resources/img/carousel/large-device/chk-app-status-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a.retrieveid-icon {
+    background: url(../../resources/img/carousel/large-device/retrieve-spid-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* Carousel END*/
+
+.login-captcha-refresh {
+    position: relative;
+    top: -20px;
+    margin-left: 5px;
+}
+
+.modal-dialog {
+    width: 396px;
+}
+
+/*------ LOGIN STYLE ------*/
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.modal-body .form-horizontal .col-sm-10,
+.modal-body .form-horizontal .col-sm-2 {
+    width: 100%;
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}
+
+.login-modal-content {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.modal-dialog {
+    box-shadow: 0 0 10px 1px black;
+}
+/*custimize */
+#myModalHorizontal .hidden-label, .eserviceLoginForm .hidden-label {
+    clip: rect(0,0,0,0);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	margin: -1px;
+}
+
+/*Form start */
+.login-note {
+    font-size: 0.9375em;
+    color: #696671;
+    padding-bottom: 13px;
+    padding-top: 20px;
+    position: relative;
+}
+#sectionB .login-note {
+    padding-top: 10px;
+}
+.login-note p.note {
+    font-weight: 600;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.login-note p.note a {
+    font-weight: 600;
+}
+.login-note p.userguide {
+    font-size: 0.9em;
+    padding-top: 15px;
+}
+/*Form start */
+.qr-refresh-btn, .qr-get-new-qr-btn {
+    font-size: 1.3em !important;
+    font-weight: bold;
+    height: auto;
+    margin: 24px 0 39px !important;
+    display: none;
+}
+.qr-image {
+    position: relative;
+    height: 195px;
+    margin-top: -41px;
+    z-index: 2;
+    perspective: 400px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+}
+.qr-logo-overlay {
+    display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 65px;
+	height: 65px;
+	-webkit-transform: translate(-50%, 50%);
+	-moz-transform: translate(-50%, 50%);
+	-ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+}
+.qr-image #qrImage[src=""] + .qr-logo-overlay {
+    display: none;
+}
+
+.qr-image::after {
+    content: "";
+    pointer-events: none;
+    display: block;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.2s ease-out;
+}
+.qr-image #qrcodelink {
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 195px;
+    height: 195px;
+    -webkit-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+    -moz-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+    -o-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+    transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+}
+.qr-image #qrcodelink.flip {
+	-webkit-transform: translateX(-50%) scale(.8);
+    -moz-transform: translateX(-50%) scale(.8);;
+    -ms-transform: translateX(-50%) scale(.8);;
+    transform: translateX(-50%) scale(.8);
+	opacity: 0;
+}
+.qr-image img#qrImage{
+    display: block;
+    width: 195px;
+    height: 195px;
+    -webkit-image-rendering: pixelated;
+    image-rendering: pixelated;
+    cursor: pointer;
+    transform: scale(1);
+    opacity: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.qr-image .qr-image__success {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    left: 100%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: auto;
+    height: 185px;
+    margin-top: 5px;
+    -webkit-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+    -moz-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+    -o-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+    transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+}
+.qr-label__wrapper {
+    position:relative;
+    height: 54px;
+}
+.qr-label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #696671;
+    padding-top: 8px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+}
+.qr-label--main {
+    -webkit-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms; 
+    -moz-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms; 
+    -o-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms; 
+    transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms;
+}
+.qr-label--success {
+    opacity: 0;
+    position: absolute;
+    left: 100%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms; 
+    -moz-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms; 
+    -o-transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms; 
+    transition: all 750ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 50ms;
+}
+.qr-label.qr-label--small {
+    font-size: 0.9375em;
+    font-weight: normal;
+}
+.qr-main {
+    display: block;
+    height: 301px;
+}
+.qr-unavailable, .qr-suspended-account, .qr-locked-account {
+    margin-top: -20px;
+    height: 264px;
+    display: none;
+}
+.qr-unavailable img{
+    display: block;
+    margin: 16px auto 9px;
+    width: 60px;
+    height: 60px;
+}
+.qr__wrapper .qr-image .qr-error {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    color: #696671;
+    font-weight: bold;
+    font-size: 1.1em;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) scale(1.5);
+    -moz-transform: translateY(-50%) scale(1.5);
+    -ms-transform: translateY(-50%) scale(1.5);
+    transform: translateY(-50%) scale(1.5);
+    z-index: 1;
+    opacity: 0;
+    display: block;
+    padding: 0;
+    pointer-events: none;
+    -webkit-transition: all 250ms cubic-bezier(0.175, 0.885, 0.320, 1) 50ms;
+    -webkit-transition: all 250ms cubic-bezier(0.175, 0.885, 0.320, 1.275) 50ms; 
+    -moz-transition: all 250ms cubic-bezier(0.175, 0.885, 0.320, 1.275) 50ms; 
+    -o-transition: all 250ms cubic-bezier(0.175, 0.885, 0.320, 1.275) 50ms; 
+    transition: all 250ms cubic-bezier(0.175, 0.885, 0.320, 1.275) 50ms; 
+}
+.qr__wrapper .qr-image .qr-error.qr-error--suspended, .qr__wrapper .qr-image .qr-error.qr-error--locked {
+    padding: 40px 22px 0;
+}
+.qr__wrapper .qr-image .qr-error span {  
+    font-size: 0.9375em;
+    font-weight: normal;
+    display: block;
+    padding-top: 8px;
+}
+.qr__wrapper.has-scanned .qr-image #qrcodelink, .qr__wrapper.has-scanned .qr-label--main {
+    opacity: 0;
+    left: 0%;
+}
+.qr__wrapper.has-scanned .qr-image .qr-image__success {
+    opacity: 1;
+    left: 50%;
+}
+.qr__wrapper.has-scanned .qr-label--success {
+    left: 50%;
+    opacity: 1;
+}
+
+.qr__wrapper.is-expired .qr-image::after {
+    pointer-events: all;
+    background-color: rgba(255,255,255, 0.95);
+}
+.qr__wrapper.cant-gen .qr-image::after, .qr__wrapper.is-suspended .qr-image::after, .qr__wrapper.is-locked .qr-image::after {
+    pointer-events: all;
+    background-color: rgba(255,255,255, 1);
+}
+.qr__wrapper.is-expired .qr-image .qr-error:not(.qr-error--cant-gen):not(.qr-error--suspended):not(.qr-error--locked), 
+.qr__wrapper.cant-gen .qr-image .qr-error:not(.qr-error--expired):not(.qr-error--suspended):not(.qr-error--locked), 
+.qr__wrapper.is-suspended .qr-image .qr-error:not(.qr-error--expired):not(.qr-error--cant-gen):not(.qr-error--locked), 
+.qr__wrapper.is-locked .qr-image .qr-error:not(.qr-error--expired):not(.qr-error--cant-gen):not(.qr-error--suspended) {
+    opacity: 1;
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+}
+
+
+.qr__wrapper.is-expired .qr-label__wrapper, .qr__wrapper.cant-gen .qr-label__wrapper,
+.qr__wrapper.is-suspended .qr-label__wrapper, .qr__wrapper.is-locked .qr-label__wrapper {
+    display: none;
+}
+.qr__wrapper.is-expired .qr-refresh-btn:not(.qr-get-new-qr-btn) {
+    display: block;
+}
+.qr__wrapper.cant-gen .qr-get-new-qr-btn:not(.qr-refresh-btn) {
+    display: block;
+}
+
+.qr__wrapper.is-unavailable .qr-unavailable {
+    display: block;
+}
+.qr__wrapper.is-unavailable .qr-label {
+    position: relative;
+}
+.qr__wrapper.is-unavailable .qr-main {
+    display: none;
+}
+
+.login__footer {
+    position: relative;
+    height: 100px;
+}
+
+.login__footer::before {
+    content: "";
+    display: block;
+    background-color: #E2DEDF;
+    width: calc(100% + 96px);
+    height: 100%;
+    position: absolute;
+    left: -48px;
+    top: 0;
+}
+.login__footer a {
+    font-weight: normal;
+}
+.login-label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: -42px 0 15px;
+    color: #696671;
+}
+.login-form-body {
+    background: #fff;
+    padding: 0;
+    position: relative;
+    perspective: 800px;
+    perspective-origin: right top;
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-top: 3px solid #3e4043;
+}
+
+.innter-form {
+    padding: 0px 48px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.final-login {
+    width: 100%;
+    position: relative;
+    height: 96px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+.final-login li {
+    list-style: none;
+    z-index: 1;
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 0, 96px 0, 96px 96px, 0 0);
+    clip-path: polygon(0 0, 96px 0, 96px 96px, 0 0);
+}
+.final-login li a {
+    -webkit-user-drag: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    -webkit-transition: all 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: all 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -o-transition: all 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    transition: all 250ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+.final-login li#loginli a {
+    background: url('../../resources/img/id-pw-icon.png');
+}
+.final-login li#qrcodeloginli a {
+    background: url('../../resources/img/qr-icon.png');
+}
+.final-login li:hover a, .final-login li.hovered a {
+    top: -5px;
+    right: -5px;
+}
+.final-login li:hover:active a {
+    top: 0px;
+    right: 0px;
+}
+.final-login li.active {
+    z-index: -1;
+    opacity: 0;
+}
+.final-login li.active a {
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.final-login::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-top: 48px solid #FAE2E2;
+    border-right: 48px solid #FAE2E2;
+    border-left: 48px solid transparent;
+    border-bottom: 48px solid transparent;
+}
+.final-login.final-login--hidden::before {
+    display: none;
+}
+.white-area{
+    display: block;
+    background: url("../../resources/img/qr-shadow.png") no-repeat 0 0;
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    pointer-events: none;
+}
+.white-area::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 48px solid #ffffff;
+    border-bottom: 48px solid #ffffff;
+    border-right: 48px solid transparent;
+    border-top: 48px solid transparent;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+}

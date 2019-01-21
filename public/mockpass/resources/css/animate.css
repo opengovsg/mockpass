@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* login page, qr tab tooltip animation */
+@keyframes tooltip-ani {
+    0% {
+        transform: translateX(0) rotateY(-16deg);
+        opacity: 1;
+    }
+    5% {
+        transform: translateX(0) rotateY(20deg);
+        opacity: 1;
+    }
+    10% {
+        transform: translateX(0) rotateY(-12deg);
+        opacity: 1;
+    }
+    15% {
+        transform: translateX(0) rotateY(6deg);
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(0) rotateY(-4deg);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(0) rotateY(1deg);
+        opacity: 1;
+    }
+    30% {
+        transform: translateX(0) rotateY(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+.ani-rotate {
+    animation-name: tooltip-ani;
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    animation-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+}
