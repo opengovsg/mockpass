@@ -1,0 +1,40 @@
+<html>
+  <head><title>MyInfo - Consent to giving details</title></head>
+  <body>
+    Disclose the following details of {{ id }} to this provider?
+    <form action="{{action}}" method="post">
+      <div>
+        <label for="scope">Scope</label>
+        <input type="text" id="scope" name="scope" value="{{scope}}" readonly="readonly">
+      </div>
+      <div>
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" value="{{state}}" readonly="readonly">
+      </div>
+      <div>
+        <label for="client_id">Client ID</label>
+        <input type="text" id="client_id" name="client_id" value="{{client_id}}" readonly="readonly">
+      </div>
+      <div>
+        <label for="purpose">Purpose</label>
+        <input type="text" id="purpose" name="purpose" value="{{purpose}}" readonly="readonly">
+      </div>
+      <div>
+        <label for="redirect_uri">Redirect to:</label>
+        <input type="text" id="redirect_uri" name="redirect_uri" value="{{redirect_uri}}" readonly="readonly">
+      </div>
+      <div>
+        Decision:
+        <div>
+          <input type="radio" id="allow" name="decision" value="allow" checked>
+          <label for="allow">Allow</label>
+        </div>
+        <div>
+          <input type="radio" id="deny" name="decision" value="deny">
+          <label for="deny">Deny</label>
+        </div>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
