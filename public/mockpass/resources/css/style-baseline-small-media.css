@@ -17,7 +17,7 @@
         height: 49px;
         padding: 0;
         width: 122px;
-        background-size: contain;
+        background-size: contain!important;
         background: url("../../resources/img/logo/mockpass-logo.png");
         background-repeat: no-repeat;
         margin: 0 auto;
