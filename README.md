@@ -14,6 +14,9 @@ CorpPass:
 
 MyInfo:
  * http://localhost:5156/myinfo/person-basic (exclusive to government systems)
+ * http://localhost:5156/myinfo/authorise
+ * http://localhost:5156/myinfo/token
+ * http://localhost:5156/myinfo/person
 
 Provide your application with the `spcp*` certs found in `static/certs`
 and with application certs at `static/certs/{key.pem|server.crt}`
