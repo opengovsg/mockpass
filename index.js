@@ -33,7 +33,7 @@ const app = configSpcp(express(), {
 configMyInfo(app, { serviceProvider, port: PORT })
 
 app.enable('trust proxy')
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(
   PORT,
