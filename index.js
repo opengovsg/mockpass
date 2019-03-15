@@ -15,6 +15,13 @@ const serviceProvider = {
   pubKey: fs.readFileSync(path.resolve(__dirname, process.env.SERVICE_PROVIDER_PUB_KEY || './static/certs/key.pub')),
 }
 
+const cryptoConfig = {
+  signAssertion: process.env.SIGN_ASSERTION !== 'false', //default to true to be backward compatable
+  signResponse: process.env.SIGN_RESPONSE !== 'false',
+  encryptAssertion: process.env.ENCRYPT_ASSERTION !== 'false',
+  resolveArtifactRequestSigned: process.env.RESOLVE_ARTIFACT_REQUEST_SIGNED !== 'false',
+}
+
 const app = configSpcp(express(), {
   serviceProvider,
   idpConfig: {
@@ -28,6 +35,7 @@ const app = configSpcp(express(), {
     },
   },
   showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
+  cryptoConfig,
 })
 
 configMyInfo(app, { serviceProvider, port: PORT })

@@ -39,6 +39,12 @@ $ export MOCKPASS_UEN=123456789A
 
 $ export SHOW_LOGIN_PAGE=true # Optional
 
+# Disable signing/encryption (Optional, by default `true`)
+$ export SIGN_ASSERTION=false
+$ export ENCRYPT_ASSERTION=false
+$ export SIGN_RESPONSE=false
+$ export RESOLVE_ARTIFACT_REQUEST_SIGNED=false
+
 $ npx mockpass
 MockPass listening on 5156
 ```
