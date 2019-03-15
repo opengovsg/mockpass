@@ -19,11 +19,11 @@ const app = configSpcp(express(), {
   serviceProvider,
   idpConfig: {
     singPass: {
-      id: process.env.SINGPASS_IDP_ID || 'https://saml-internet.singpass.gov.sg/FIM/sps/SingpassIDPFed/saml20',
+      id: process.env.SINGPASS_IDP_ID || 'http://localhost:5156/singpass/saml20',
       assertEndpoint: process.env.SINGPASS_ASSERT_ENDPOINT,
     },
     corpPass: {
-      id: process.env.CORPPASS_IDP_ID || 'https://saml.corppass.gov.sg/FIM/sps/CorpIDPFed/saml20',
+      id: process.env.CORPPASS_IDP_ID || 'http://localhost:5156/singpass/saml20',
       assertEndpoint: process.env.CORPPASS_ASSERT_ENDPOINT,
     },
   },
