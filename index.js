@@ -30,7 +30,7 @@ const app = configSpcp(express(), {
       assertEndpoint: process.env.SINGPASS_ASSERT_ENDPOINT,
     },
     corpPass: {
-      id: process.env.CORPPASS_IDP_ID || 'http://localhost:5156/singpass/saml20',
+      id: process.env.CORPPASS_IDP_ID || 'http://localhost:5156/corppass/saml20',
       assertEndpoint: process.env.CORPPASS_ASSERT_ENDPOINT,
     },
   },
