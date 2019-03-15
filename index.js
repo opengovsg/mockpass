@@ -15,19 +15,27 @@ const serviceProvider = {
   pubKey: fs.readFileSync(path.resolve(__dirname, process.env.SERVICE_PROVIDER_PUB_KEY || './static/certs/key.pub')),
 }
 
+const cryptoConfig = {
+  signAssertion: process.env.SIGN_ASSERTION !== 'false', //default to true to be backward compatable
+  signResponse: process.env.SIGN_RESPONSE !== 'false',
+  encryptAssertion: process.env.ENCRYPT_ASSERTION !== 'false',
+  resolveArtifactRequestSigned: process.env.RESOLVE_ARTIFACT_REQUEST_SIGNED !== 'false',
+}
+
 const app = configSpcp(express(), {
   serviceProvider,
   idpConfig: {
     singPass: {
-      id: process.env.SINGPASS_IDP_ID || 'https://saml-internet.singpass.gov.sg/FIM/sps/SingpassIDPFed/saml20',
+      id: process.env.SINGPASS_IDP_ID || 'http://localhost:5156/singpass/saml20',
       assertEndpoint: process.env.SINGPASS_ASSERT_ENDPOINT,
     },
     corpPass: {
-      id: process.env.CORPPASS_IDP_ID || 'https://saml.corppass.gov.sg/FIM/sps/CorpIDPFed/saml20',
+      id: process.env.CORPPASS_IDP_ID || 'http://localhost:5156/corppass/saml20',
       assertEndpoint: process.env.CORPPASS_ASSERT_ENDPOINT,
     },
   },
   showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
+  cryptoConfig,
 })
 
 configMyInfo(app, { serviceProvider, port: PORT })

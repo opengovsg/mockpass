@@ -1,4 +1,4 @@
-<saml:Assertion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" ID="_d71a3a8e9fcc45c9e9d248ef7049393fc8f04e5f75" Version="2.0" IssueInstant="2014-07-17T01:01:48Z">
+<saml:Assertion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" ID="_d71a3a8e9fcc45c9e9d248ef7049393fc8f04e5f75" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Version="2.0" IssueInstant="{{issueInstant}}">
   <saml:Issuer>http://idp.example.com/metadata.php</saml:Issuer>
   <saml:Subject>
     <saml:NameID Format="urn:ibm:names:ITFIM:5.1:accessmanager">_ce3d2948b4cf20146dee0a0b3dd6f69b6cf86f62d7</saml:NameID>
