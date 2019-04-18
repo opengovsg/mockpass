@@ -1,0 +1,2 @@
+# Set to not apply eol conversion for subresource integrity check
+public/mockpass/resources/js/*.js -text
