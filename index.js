@@ -16,7 +16,7 @@ const serviceProvider = {
 }
 
 const cryptoConfig = {
-  signAssertion: process.env.SIGN_ASSERTION !== 'false', //default to true to be backward compatable
+  signAssertion: process.env.SIGN_ASSERTION !== 'false', // default to true to be backward compatable
   signResponse: process.env.SIGN_RESPONSE !== 'false',
   encryptAssertion: process.env.ENCRYPT_ASSERTION !== 'false',
   resolveArtifactRequestSigned: process.env.RESOLVE_ARTIFACT_REQUEST_SIGNED !== 'false',
