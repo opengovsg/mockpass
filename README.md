@@ -28,7 +28,7 @@ Alternatively, provide the paths to your app cert as env vars
 $ npm install @opengovsg/mockpass
 
 # Some familiarity with SAML Artifact Binding is assumed
-# Configure where MockPass should send SAML artifact to
+# Optional: Configure where MockPass should send SAML artifact to, default endpoint will be `PartnerId` in request query parameter.
 $ export SINGPASS_ASSERT_ENDPOINT=http://localhost:5000/singpass/assert
 $ export CORPPASS_ASSERT_ENDPOINT=http://localhost:5000/corppass/assert
 
