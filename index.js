@@ -32,7 +32,7 @@ const app = configSpcp(express(), {
       assertEndpoint: process.env.CORPPASS_ASSERT_ENDPOINT,
     },
   },
-  showLoginPage: process.env.SHOW_LOGIN_PAGE !== 'true',
+  showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
   cryptoConfig,
 })
 
