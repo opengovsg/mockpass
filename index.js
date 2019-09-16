@@ -9,8 +9,11 @@ const { configSpcp, configMyInfo } = require('./lib/express')
 const PORT = process.env.MOCKPASS_PORT || process.env.PORT || 5156
 
 if (!process.env.SINGPASS_ASSERT_ENDPOINT && !process.env.CORPPASS_ASSERT_ENDPOINT) {
-  throw new Error('Either SINGPASS_ASSERT_ENDPOINT or CORPPASS_ASSERT_ENDPOINT must be set')
+  console.warn('SINGPASS_ASSERT_ENDPOINT or CORPPASS_ASSERT_ENDPOINT is not set. ' +
+    'Value of `PartnerId` request query parameter in redirect URL will be used.'
+  )
 }
+
 const serviceProvider = {
   cert: fs.readFileSync(path.resolve(__dirname, process.env.SERVICE_PROVIDER_CERT_PATH || './static/certs/server.crt')),
   pubKey: fs.readFileSync(path.resolve(__dirname, process.env.SERVICE_PROVIDER_PUB_KEY || './static/certs/key.pub')),
