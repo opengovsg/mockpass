@@ -1,4 +1,4 @@
-FROM node:12-alpine3.9
+FROM node:latest
 
 WORKDIR /usr/src/mockpass
 
