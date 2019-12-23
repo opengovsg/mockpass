@@ -2,10 +2,10 @@ FROM node:12-alpine3.9
 
 WORKDIR /usr/src/mockpass
 
-COPY package* /usr/src/mockpass/
+COPY package* ./
 
 RUN npm ci
 
-COPY . /usr/src/mockpass
+COPY . ./
 
 CMD ["node", "index.js"]
