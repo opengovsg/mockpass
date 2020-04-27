@@ -45,7 +45,7 @@
     "xpath": "0.0.27"
   },
   "devDependencies": {
-    "@opengovsg/eslint-config-opengovsg": "1.0.5",
+    "@opengovsg/eslint-config-opengovsg": "1.0.7",
     "eslint": "5.16.0",
     "eslint-config-standard": "12.0.0",
     "eslint-plugin-import": "2.14.0",
