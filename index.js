@@ -42,7 +42,9 @@ const app = configSpcp(express(), {
   cryptoConfig,
 })
 
-configMyInfo(app, { serviceProvider, port: PORT })
+configMyInfo.consent(app)
+configMyInfo.v2(app, { serviceProvider })
+configMyInfo.v3(app, { serviceProvider })
 
 app.enable('trust proxy')
 app.use(express.static(path.join(__dirname, 'public')))
