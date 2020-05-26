@@ -1,4 +1,3 @@
-
 {
   "attributes": {
     "basic": [
@@ -142,16 +141,31 @@
         "value": "2020-01-01"
       },
       "regadd": {
-        "country": "SG",
-        "unit": "11",
-        "street": "BEDOK RESERVOIR ROAD",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": "11"
+        },
+        "street": {
+          "value": "BEDOK RESERVOIR ROAD"
+        },
         "lastupdated": "2018-03-20",
-        "block": "113",
+        "block": {
+          "value": "113"
+        },
         "source": "1",
-        "postal": "470113",
+        "postal": {
+          "value": "470113"
+        },
         "classification": "C",
-        "floor": "03",
-        "building": "EUNOS VISTA"
+        "floor": {
+          "value": "03"
+        },
+        "building": {
+          "value": "EUNOS VISTA"
+        }
       },
       "mailadd": {
         "country": "",
@@ -549,16 +563,31 @@
         "value": "2023-01-01"
       },
       "regadd": {
-        "country": "SG",
-        "unit": "",
-        "street": "ROCHDALE ROAD",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": ""
+        },
+        "street": {
+          "value": "ROCHDALE ROAD"
+        },
         "lastupdated": "2018-03-20",
-        "block": "29",
+        "block": {
+          "value": "29"
+        },
         "source": "1",
-        "postal": "535842",
+        "postal": {
+          "value": "535842"
+        },
         "classification": "C",
-        "floor": "",
-        "building": ""
+        "floor": {
+          "value": ""
+        },
+        "building": {
+          "value": ""
+        }
       },
       "mailadd": {
         "country": "SG",
@@ -906,16 +935,31 @@
         "value": "2024-01-01"
       },
       "regadd": {
-        "country": "SG",
-        "unit": "367",
-        "street": "JURONG EAST AVENUE 1",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": "367"
+        },
+        "street": {
+          "value": "JURONG EAST AVENUE 1"
+        },
         "lastupdated": "2018-03-20",
-        "block": "35",
-        "postal": "609774",
+        "block": {
+          "value": "35"
+        },
+        "postal": {
+          "value": "609774"
+        },
         "source": "1",
         "classification": "C",
-        "floor": "08",
-        "building": "PARC OASIS"
+        "floor": {
+          "value": "08"
+        },
+        "building": {
+          "value": "PARC OASIS"
+        }
       },
       "mailadd": {
         "country": "",
@@ -1204,7 +1248,7 @@
         "value": ""
       }
     },
-    "S9912366D":{
+    "S9912366D": {
       "name": {
         "lastupdated": "2018-03-20",
         "source": "1",
@@ -1296,16 +1340,31 @@
         "value": "2025-01-01"
       },
       "regadd": {
-        "country": "SG",
-        "unit": "12",
-        "street": "BRADDELL HILL",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": "12"
+        },
+        "street": {
+          "value": "BRADDELL HILL"
+        },
         "lastupdated": "2018-03-20",
-        "block": "10",
+        "block": {
+          "value": "10"
+        },
         "source": "1",
-        "postal": "579719",
+        "postal": {
+          "value": "579719"
+        },
         "classification": "C",
-        "floor": "23",
-        "building": "BRADDELL VIEW"
+        "floor": {
+          "value": "23"
+        },
+        "building": {
+          "value": "BRADDELL VIEW"
+        }
       },
       "mailadd": {
         "country": "",
@@ -2201,16 +2260,31 @@
         "value": ""
       },
       "regadd": {
-        "country": "SG",
-        "unit": "22",
-        "street": "LORONG 1 TOA PAYOH",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": "22"
+        },
+        "street": {
+          "value": "LORONG 1 TOA PAYOH"
+        },
         "lastupdated": "2018-03-20",
-        "block": "123",
+        "block": {
+          "value": "123"
+        },
         "source": "1",
-        "postal": "310123",
+        "postal": {
+          "value": "310123"
+        },
         "classification": "C",
-        "floor": "12",
-        "building": "TOA PAYOH VIEW"
+        "floor": {
+          "value": "12"
+        },
+        "building": {
+          "value": "TOA PAYOH VIEW"
+        }
       },
       "mailadd": {
         "country": "SG",
@@ -2944,7 +3018,7 @@
         "classification": "C",
         "value": ""
       }
-    },  
+    },
     "S9812382B": {
       "name": {
         "lastupdated": "2018-03-20",
@@ -3037,16 +3111,29 @@
         "value": "2025-01-01"
       },
       "regadd": {
-        "country": "SG",
-        "unit": "367",
-        "street": "JURONG EAST STREET 21",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": "367"
+        },
+        "street": {
+          "value": "JURONG EAST STREET 21"
+        },
         "lastupdated": "2018-03-20",
-        "block": "288A",
+        "block": {
+          "value": "288A"
+        },
         "source": "1",
         "postal": "601288",
         "classification": "C",
-        "floor": "08",
-        "building": "HDB-JURONG EAST"
+        "floor": {
+          "value": "08"
+        },
+        "building": {
+          "value": "HDB-JURONG EAST"
+        }
       },
       "mailadd": {
         "country": "",
@@ -3404,16 +3491,31 @@
         "value": "2025-01-01"
       },
       "regadd": {
-        "country": "SG",
-        "unit": "10",
-        "street": "SIMEI STREET 1",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": "10"
+        },
+        "street": {
+          "value": "SIMEI STREET 1"
+        },
         "lastupdated": "2018-03-20",
-        "block": "138",
-        "postal": "520138",
+        "block": {
+          "value": "138"
+        },
+        "postal": {
+          "value": "520138"
+        },
         "source": "1",
         "classification": "C",
-        "floor": "38",
-        "building": "HDB-TAMPINES"
+        "floor": {
+          "value": "38"
+        },
+        "building": {
+          "value": "HDB-TAMPINES"
+        }
       },
       "mailadd": {
         "country": "",
@@ -3693,16 +3795,31 @@
         "value": "2025-01-01"
       },
       "regadd": {
-        "country": "SG",
-        "unit": "58",
-        "street": "PUNGGOL FIELD",
+        "type": "SG",
+        "country": {
+          "value": "SG"
+        },
+        "unit": {
+          "value": "58"
+        },
+        "street": {
+          "value": "PUNGGOL FIELD"
+        },
         "lastupdated": "2016-01-06",
-        "block": "101B",
+        "block": {
+          "value": "101B"
+        },
         "source": "1",
-        "postal": "822101",
+        "postal": {
+          "value": "822101"
+        },
         "classification": "C",
-        "floor": "05",
-        "building": "HDB-PUNGGOL"
+        "floor": {
+          "value": "05"
+        },
+        "building": {
+          "value": "HDB-PUNGGOL"
+        }
       },
       "mailadd": {
         "country": "",
@@ -5816,7 +5933,7 @@
         "classification": "C",
         "value": ""
       }
-    },  
+    },
     "G1612350T": {
       "name": {
         "lastupdated": "2018-03-20",
