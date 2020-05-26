@@ -1,5 +1,5 @@
 # MockPass
-A mock SingPass/CorpPass server for dev purposes
+A mock SingPass/CorpPass/MyInfo server for dev purposes
 
 ## Quick Start
 
@@ -13,10 +13,10 @@ CorpPass:
  * http://localhost:5156/corppass/soap
 
 MyInfo:
- * http://localhost:5156/myinfo/person-basic (exclusive to government systems)
- * http://localhost:5156/myinfo/authorise
- * http://localhost:5156/myinfo/token
- * http://localhost:5156/myinfo/person
+ * http://localhost:5156/myinfo/{v2,v3}/person-basic (exclusive to government systems)
+ * http://localhost:5156/myinfo/{v2,v3}/authorise
+ * http://localhost:5156/myinfo/{v2,v3}/token
+ * http://localhost:5156/myinfo/{v2,v3}/person
 
 Provide your application with the `spcp*` certs found in `static/certs`
 and with application certs at `static/certs/{key.pem|server.crt}`
