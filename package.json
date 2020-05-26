@@ -1,6 +1,6 @@
 {
   "name": "@opengovsg/mockpass",
-  "version": "1.5.3",
+  "version": "2.0.0",
   "description": "A mock SingPass/CorpPass server for dev purposes",
   "main": "index.js",
   "bin": {
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@opengovsg/eslint-config-opengovsg": "1.0.7",
-    "eslint": "7.0.0",
+    "eslint": "7.1.0",
     "eslint-config-standard": "14.1.1",
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-node": "11.1.0",
