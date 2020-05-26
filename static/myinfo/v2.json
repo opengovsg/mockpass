@@ -84,7 +84,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -108,7 +108,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "SG"
+        "value": "SG"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -491,7 +491,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -515,7 +515,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "SG"
+        "value": "SG"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -848,7 +848,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -872,7 +872,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "GN"
+        "value": "GN"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -1238,7 +1238,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -1262,7 +1262,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "SG"
+        "value": "SG"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -1510,7 +1510,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -1534,7 +1534,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "MY"
+        "value": "MY"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -1792,7 +1792,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -1816,7 +1816,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "TH"
+        "value": "TH"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -2143,7 +2143,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -2167,7 +2167,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "GC"
+        "value": "GC"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -2426,7 +2426,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -2450,7 +2450,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "SG"
+        "value": "SG"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -2979,7 +2979,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -3003,7 +3003,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "US"
+        "value": "US"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -3346,7 +3346,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -3370,7 +3370,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "SG"
+        "value": "SG"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -3635,7 +3635,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -3659,7 +3659,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "SG"
+        "value": "SG"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -3917,7 +3917,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "U"
+        "value": "U"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -3941,7 +3941,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "CN"
+        "value": "CN"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -4284,7 +4284,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -4308,7 +4308,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "CD"
+        "value": "CD"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -4686,7 +4686,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -4710,7 +4710,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "MY"
+        "value": "MY"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -4969,7 +4969,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -4993,7 +4993,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "IN"
+        "value": "IN"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -5252,7 +5252,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -5276,7 +5276,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "AU"
+        "value": "AU"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -5534,7 +5534,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "M"
+        "value": "M"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -5558,7 +5558,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "CN"
+        "value": "CN"
       },
       "dob": {
         "lastupdated": "2018-03-20",
@@ -5851,7 +5851,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "F"
+        "value": "F"
       },
       "race": {
         "lastupdated": "2018-03-23",
@@ -5875,7 +5875,7 @@
         "lastupdated": "2018-03-20",
         "source": "1",
         "classification": "C",
-        "code": "MY"
+        "value": "MY"
       },
       "dob": {
         "lastupdated": "2018-03-20",
