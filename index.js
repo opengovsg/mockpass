@@ -5,7 +5,7 @@ const morgan = require('morgan')
 const path = require('path')
 require('dotenv').config()
 
-const { configSpcp, configMyInfo } = require('./lib/express')
+const { configSPCP, configOIDC, configMyInfo } = require('./lib/express')
 
 const PORT = process.env.MOCKPASS_PORT || process.env.PORT || 5156
 
@@ -42,7 +42,7 @@ const cryptoConfig = {
     process.env.RESOLVE_ARTIFACT_REQUEST_SIGNED !== 'false',
 }
 
-const app = configSpcp(express(), {
+const options = {
   serviceProvider,
   idpConfig: {
     singPass: {
@@ -58,13 +58,18 @@ const app = configSpcp(express(), {
   },
   showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
   cryptoConfig,
-})
+}
+
+const app = express()
+app.use(morgan('combined'))
+
+configSPCP(app, options)
+configOIDC(app, options)
 
 configMyInfo.consent(app)
 configMyInfo.v2(app, { serviceProvider })
 configMyInfo.v3(app, { serviceProvider })
 
-app.use(morgan('combined'))
 app.enable('trust proxy')
 app.use(express.static(path.join(__dirname, 'public')))
 
