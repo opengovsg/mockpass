@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const express = require('express')
+const morgan = require('morgan')
 const path = require('path')
 require('dotenv').config()
 
@@ -46,6 +47,7 @@ configMyInfo.consent(app)
 configMyInfo.v2(app, { serviceProvider })
 configMyInfo.v3(app, { serviceProvider })
 
+app.use(morgan('combined'))
 app.enable('trust proxy')
 app.use(express.static(path.join(__dirname, 'public')))
 
