@@ -1,8 +1,13 @@
 {
   "extends": [
-    "@opengovsg/eslint-config-opengovsg"
+    "eslint:recommended",
+    "plugin:prettier/recommended"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
   "env": {
-    "node": true
+    "node": true,
+    "es6": true
   }
 }
