@@ -1,22 +1,37 @@
 # MockPass
+
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/opengovsg/mockpass)
+
 A mock SingPass/CorpPass/MyInfo server for dev purposes
 
-## Quick Start
+## Quick Start (hosted by Gitpod)
+
+- Click the ready-to-code badge above
+- Wait for MockPass to start
+- Make port 5156 public
+- Open Browser to note the URL hosting MockPass
+- Configure your application per local machine quick start, changing
+  the localhost:5156 to the Gitpod hostname
+
+## Quick Start (on local machine)
 
 Configure your application to point to the following endpoints:
+
 SingPass:
- * http://localhost:5156/singpass/logininitial - login redirect with optional page
- * http://localhost:5156/singpass/soap - receives SAML artifact and returns assertion
+ - http://localhost:5156/singpass/logininitial - SAML login redirect with optional page
+ - http://localhost:5156/singpass/soap - receives SAML artifact and returns assertion
+ - http://localhost:5156/singpass/authorize - OIDC login redirect with optional page
+ - http://localhost:5156/singpass/token - receives OIDC authorization code and returns id_token
 
 CorpPass:
- * http://localhost:5156/corppass/logininitial
- * http://localhost:5156/corppass/soap
+ - http://localhost:5156/corppass/logininitial
+ - http://localhost:5156/corppass/soap
 
 MyInfo:
- * http://localhost:5156/myinfo/{v2,v3}/person-basic (exclusive to government systems)
- * http://localhost:5156/myinfo/{v2,v3}/authorise
- * http://localhost:5156/myinfo/{v2,v3}/token
- * http://localhost:5156/myinfo/{v2,v3}/person
+ - http://localhost:5156/myinfo/{v2,v3}/person-basic (exclusive to government systems)
+ - http://localhost:5156/myinfo/{v2,v3}/authorise
+ - http://localhost:5156/myinfo/{v2,v3}/token
+ - http://localhost:5156/myinfo/{v2,v3}/person
 
 Provide your application with the `spcp*` certs found in `static/certs`
 and with application certs at `static/certs/{key.pem|server.crt}`
@@ -37,7 +52,7 @@ $ export MOCKPASS_PORT=5156
 $ export MOCKPASS_NRIC=S8979373D
 $ export MOCKPASS_UEN=123456789A
 
-$ export SHOW_LOGIN_PAGE=true # Optional
+$ export SHOW_LOGIN_PAGE=true # Optional, defaults to `false`
 
 # Disable signing/encryption (Optional, by default `true`)
 $ export SIGN_ASSERTION=false
