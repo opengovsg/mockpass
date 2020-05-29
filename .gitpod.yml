@@ -1,5 +1,5 @@
 tasks:
   - init: npm install 
-    command: npm start
+    command: SHOW_LOGIN_PAGE=true npm start
 ports:
   - port: 5156
