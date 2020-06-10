@@ -11,7 +11,7 @@
     "start": "nodemon",
     "cz": "git-cz",
     "lint": "eslint lib",
-    "lint:fix": "eslint --fix lib"
+    "lint-fix": "eslint --fix lib"
   },
   "repository": {
     "type": "git",
