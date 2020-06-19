@@ -60,6 +60,10 @@ $ export ENCRYPT_ASSERTION=false
 $ export SIGN_RESPONSE=false
 $ export RESOLVE_ARTIFACT_REQUEST_SIGNED=false
 
+# Encrypt payloads returned by /myinfo/*/{person, person-basic},
+# equivalent to MyInfo Auth Level L2 (testing and production)
+$ export ENCRYPT_MYINFO=false
+
 $ npx mockpass
 MockPass listening on 5156
 ```
