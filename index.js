@@ -57,6 +57,7 @@ const options = {
     },
   },
   showLoginPage: process.env.SHOW_LOGIN_PAGE === 'true',
+  encryptMyInfo: process.env.ENCRYPT_MYINFO === 'true',
   cryptoConfig,
 }
 
@@ -67,8 +68,8 @@ configSPCP(app, options)
 configOIDC(app, options)
 
 configMyInfo.consent(app)
-configMyInfo.v2(app, { serviceProvider })
-configMyInfo.v3(app, { serviceProvider })
+configMyInfo.v2(app, options)
+configMyInfo.v3(app, options)
 
 app.enable('trust proxy')
 app.use(express.static(path.join(__dirname, 'public')))
