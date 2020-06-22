@@ -64,6 +64,10 @@ $ export RESOLVE_ARTIFACT_REQUEST_SIGNED=false
 # equivalent to MyInfo Auth Level L2 (testing and production)
 $ export ENCRYPT_MYINFO=false
 
+# If specified, will verify token provided in Authorization header
+# for requests to /myinfo/*/token
+$ export SERVICE_PROVIDER_MYINFO_SECRET=<your secret here>
+
 $ npx mockpass
 MockPass listening on 5156
 ```
