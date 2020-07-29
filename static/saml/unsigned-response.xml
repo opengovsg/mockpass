@@ -4,6 +4,9 @@
     <samlp:ArtifactResponse xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
       xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_8e8dc5f69a98cc4c1ff3427e5ce34606fd672f91e6" Version="2.0" IssueInstant="{{issueInstant}}" Destination="{{destination}}" InResponseTo="{{inResponseTo}}">
       <saml:Issuer>{{issuer}}</saml:Issuer>
+      <samlp:Status>
+        <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+      </samlp:Status>
       <samlp:Response ID="_8e8dc5f69a98cc4222227e5ce34606fd672f91e6" Version="2.0" IssueInstant="{{issueInstant}}" Destination="{{destination}}">
         <saml:Issuer>{{issuer}}</saml:Issuer>
         <samlp:Status>
