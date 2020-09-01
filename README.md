@@ -26,6 +26,8 @@ SingPass:
 CorpPass:
  - http://localhost:5156/corppass/logininitial
  - http://localhost:5156/corppass/soap
+ - http://localhost:5156/corppass/authorize - OIDC login redirect with optional page
+ - http://localhost:5156/corppass/token - receives OIDC authorization code and returns id_token
 
 MyInfo:
  - http://localhost:5156/myinfo/{v2,v3}/person-basic (exclusive to government systems)
