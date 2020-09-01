@@ -5,7 +5,7 @@ const morgan = require('morgan')
 const path = require('path')
 require('dotenv').config()
 
-const { configSPCP, configOIDC, configMyInfo } = require('./lib/express')
+const { configSAML, configOIDC, configMyInfo } = require('./lib/express')
 
 const PORT = process.env.MOCKPASS_PORT || process.env.PORT || 5156
 
@@ -64,7 +64,7 @@ const options = {
 const app = express()
 app.use(morgan('combined'))
 
-configSPCP(app, options)
+configSAML(app, options)
 configOIDC(app, options)
 
 configMyInfo.consent(app)
