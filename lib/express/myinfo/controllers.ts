@@ -1,15 +1,21 @@
-const crypto = require('crypto')
-const fs = require('fs')
-const path = require('path')
+import crypto from 'crypto'
+import fs from 'fs'
+import path from 'path'
 
-const bodyParser = require('body-parser')
-const { pick, partition } = require('lodash')
+import bodyParser from 'body-parser'
+import { pick, partition } from 'lodash'
 
-const jose = require('node-jose')
-const jwt = require('jsonwebtoken')
+import jose from 'node-jose'
+import jwt from 'jsonwebtoken'
+import { Express, RequestHandler } from 'express'
 
-const assertions = require('../../assertions')
-const consent = require('./consent')
+import * as assertions from '../../assertions'
+import * as consent from './consent'
+import {
+  MyInfoVersion,
+  MyInfoSignatureFn,
+  IConfigOptions,
+} from '../../types/core'
 
 const MOCKPASS_PRIVATE_KEY = fs.readFileSync(
   path.resolve(__dirname, '../../../static/certs/spcp-key.pem'),
@@ -20,18 +26,19 @@ const MOCKPASS_PUBLIC_KEY = fs.readFileSync(
 
 const MYINFO_SECRET = process.env.SERVICE_PROVIDER_MYINFO_SECRET
 
-module.exports = (version, myInfoSignature) => (
-  app,
-  { serviceProvider, encryptMyInfo },
-) => {
-  const verify = (signature, baseString) => {
+export default (version: MyInfoVersion, myInfoSignature: MyInfoSignatureFn) => (
+  app: Express,
+  { serviceProvider, encryptMyInfo }: IConfigOptions,
+): Express => {
+  const verify = (signature: string, baseString: string): boolean => {
     const verifier = crypto.createVerify('RSA-SHA256')
     verifier.update(baseString)
     verifier.end()
     return verifier.verify(serviceProvider.pubKey, signature, 'base64')
   }
 
-  const encryptPersona = async (persona) => {
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  const encryptPersona = async (persona: object): Promise<string> => {
     const signedPersona =
       version === 'v3'
         ? jwt.sign(persona, MOCKPASS_PRIVATE_KEY, {
@@ -48,7 +55,14 @@ module.exports = (version, myInfoSignature) => (
     return encryptedAndSignedPersona
   }
 
-  const lookupPerson = (allowedAttributes) => async (req, res) => {
+  const lookupPerson = (
+    allowedAttributes: string[],
+  ): RequestHandler<
+    { uinfin: string },
+    unknown,
+    unknown,
+    { attributes: string }
+  > => async (req, res) => {
     const requestedAttributes = (req.query.attributes || '').split(',')
 
     const [attributes, disallowedAttributes] = partition(
@@ -65,7 +79,7 @@ module.exports = (version, myInfoSignature) => (
     } else {
       const transformPersona = encryptMyInfo
         ? encryptPersona
-        : (person) => person
+        : (person: unknown) => person
       const persona = assertions.myinfo[version].personas[req.params.uinfin]
       res.status(persona ? 200 : 404).send(
         persona
@@ -85,7 +99,7 @@ module.exports = (version, myInfoSignature) => (
     `/myinfo/${version}/person-basic/:uinfin/`,
     (req, res, next) => {
       // sp_esvcId and txnNo needed as query params
-      const [, authHeader] = req.get('Authorization').split(' ')
+      const [, authHeader] = req.get('Authorization')!.split(' ')
 
       const { signature, baseString } = myInfoSignature(authHeader, req)
       if (verify(signature, baseString)) {
@@ -101,13 +115,15 @@ module.exports = (version, myInfoSignature) => (
     lookupPerson(allowedAttributes.basic),
   )
   app.get(`/myinfo/${version}/person/:uinfin/`, (req, res) => {
-    const authz = req.get('Authorization').split(' ')
-    const token = authz.pop()
+    const authz = req.get('Authorization')!.split(' ')
+    const token = authz.pop()!
 
     const authHeader = (authz[1] || '').replace(',Bearer', '')
-    const { signature, baseString } = encryptMyInfo
+    const signatureResult = encryptMyInfo
       ? myInfoSignature(authHeader, req)
-      : {}
+      : undefined
+    const signature = signatureResult?.signature
+    const baseString = signatureResult?.baseString
 
     const { sub, scope } = jwt.verify(token, MOCKPASS_PUBLIC_KEY, {
       algorithms: ['RS256'],

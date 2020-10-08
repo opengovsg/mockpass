@@ -13,7 +13,7 @@ export interface IMyInfoContext {
 export type MyInfoSignatureFn = (
   authHeader: string,
   req: Request,
-  context: IMyInfoContext,
+  context?: IMyInfoContext,
 ) => { signature: string; baseString: string }
 
 interface IBaseAssertion {
@@ -75,4 +75,32 @@ export interface IOidcAssertion extends IBaseAssertion {
       nonce: string,
     ) => Promise<IOidcAssertionFnReturn>
   }
+}
+
+export enum MyInfoVersion {
+  V2 = 'v2',
+  V3 = 'v3',
+}
+
+interface IIdpConfig {
+  id: string
+  assertEndpoint: string
+}
+
+interface ICryptoConfig {
+  signAssertion: boolean
+  signResponse: boolean
+  encryptAssertion: boolean
+  resolveArtifactRequestSigned: boolean
+}
+
+export interface IConfigOptions {
+  serviceProvider: IServiceProvider
+  idpConfig: {
+    singPass: IIdpConfig
+    corpPass: IIdpConfig
+  }
+  showLoginPage: boolean
+  encryptMyInfo: boolean
+  cryptoConfig: ICryptoConfig
 }

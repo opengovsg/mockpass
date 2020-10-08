@@ -3,5 +3,6 @@ export interface IMyInfoSpec {
     basic: string[]
     income: string[]
   }
-  personas: Record<string, unknown>
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  personas: Record<string, object>
 }
