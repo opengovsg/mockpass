@@ -1,17 +1,19 @@
-const bodyParser = require('body-parser')
-const fs = require('fs')
-const { render } = require('mustache')
-const path = require('path')
-const { DOMParser } = require('xmldom')
-const xpath = require('xpath')
-const moment = require('moment')
+import bodyParser from 'body-parser'
+import fs from 'fs'
+import { render } from 'mustache'
+import path from 'path'
+import { DOMParser } from 'xmldom'
+import xpath from 'xpath'
+import moment from 'moment'
+import { Express } from 'express'
 
-const assertions = require('../assertions')
-const crypto = require('../crypto')
-const samlArtifact = require('../saml-artifact')
+import * as assertions from '../assertions'
+import crypto from '../crypto'
+import samlArtifact from '../saml-artifact'
+import { IConfigOptions, ISamlAssertion, Idp } from '../types/core'
 
 const domParser = new DOMParser()
-const dom = (xmlString) => domParser.parseFromString(xmlString)
+const dom = (xmlString: string) => domParser.parseFromString(xmlString)
 
 const TEMPLATE = fs.readFileSync(
   path.resolve(__dirname, '../../static/saml/unsigned-response.xml'),
@@ -25,20 +27,21 @@ const LOGIN_TEMPLATE = fs.readFileSync(
 const MYINFO_ASSERT_ENDPOINT = '/consent/myinfo-com'
 
 const idGenerator = {
-  singPass: (rawId) =>
+  singPass: (rawId: string) =>
     assertions.myinfo.v2.personas[rawId] ? `${rawId} [MyInfo]` : rawId,
-  corpPass: (rawId) => `${rawId.nric} / UEN: ${rawId.uen}`,
+  corpPass: (rawId: ISamlAssertion['corpPass'][number]) =>
+    `${rawId.nric} / UEN: ${rawId.uen}`,
 }
 
 function config(
-  app,
-  { showLoginPage, serviceProvider, idpConfig, cryptoConfig },
+  app: Express,
+  { showLoginPage, serviceProvider, idpConfig, cryptoConfig }: IConfigOptions,
 ) {
   const { verifySignature, sign, promiseToEncryptAssertion } = crypto(
     serviceProvider,
   )
 
-  for (const idp of ['singPass', 'corpPass']) {
+  for (const idp of Object.values(Idp)) {
     app.get(`/${idp.toLowerCase()}/logininitial`, (req, res) => {
       const assertEndpoint =
         req.query.esrvcID === 'MYINFO-CONSENTPLATFORM' && idp === 'singPass'

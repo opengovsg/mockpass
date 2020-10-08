@@ -104,3 +104,8 @@ export interface IConfigOptions {
   encryptMyInfo: boolean
   cryptoConfig: ICryptoConfig
 }
+
+export enum Idp {
+  singPass = 'singPass',
+  corpPass = 'corpPass',
+}
