@@ -29,6 +29,7 @@ export default (serviceProvider: IServiceProvider) => {
       const [artifactResolvePayload] =
         xpath.select("//*[local-name(.)='ArtifactResolve']", xml) || []
       const verifier = new SignedXml()
+      // TODO: is this change okay?
       verifier.keyInfoProvider.getKey = () => ENCRYPT_OPTIONS.pem
       verifier.loadSignature(signature.toString())
       return verifier.checkSignature(artifactResolvePayload.toString())
