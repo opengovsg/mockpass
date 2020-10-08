@@ -1,13 +1,14 @@
-const _ = require('lodash')
+import _ from 'lodash'
+import { MyInfoSignatureFn } from '../types/core'
 
-const apex = function apex(authHeader, req, context = {}) {
+export const apex: MyInfoSignatureFn = (authHeader, req, context = {}) => {
   const authHeaderFieldPairs = _(authHeader)
     .replace(/"/g, '')
     .replace(/apex_l2_eg_/g, '')
     .split(',')
     .map((v) => v.replace('=', '~').split('~'))
 
-  const authHeaderFields = _(authHeaderFieldPairs)
+  const authHeaderFields: Record<string, string> = _(authHeaderFieldPairs)
     .fromPairs()
     .mapKeys((v, k) => _.camelCase(k))
     .value()
@@ -81,7 +82,7 @@ const apex = function apex(authHeader, req, context = {}) {
   }
 }
 
-const pki = function pki(authHeader, req, context = {}) {
+export const pki: MyInfoSignatureFn = (authHeader, req, context = {}) => {
   const authHeaderFieldPairs = _(authHeader)
     .replace(/"/g, '')
     .split(',')
@@ -149,5 +150,3 @@ const pki = function pki(authHeader, req, context = {}) {
         timestamp,
   }
 }
-
-module.exports = { pki, apex }

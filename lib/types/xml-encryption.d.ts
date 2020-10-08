@@ -5,7 +5,7 @@
 declare module 'xml-encryption' {
   export interface EncryptOptions {
     rsa_pub: string | Buffer
-    pem: string | Buffer
+    pem: Buffer
     encryptionAlgorithm: string
     keyEncryptionAlgorithm: string
     input_encoding?: string
