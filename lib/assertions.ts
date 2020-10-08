@@ -1,12 +1,15 @@
-const base64 = require('base-64')
-const crypto = require('crypto')
-const fs = require('fs')
-const { render } = require('mustache')
-const moment = require('moment')
-const jose = require('node-jose')
-const path = require('path')
+import base64 from 'base-64'
+import crypto from 'crypto'
+import fs from 'fs'
+import { render } from 'mustache'
+import moment from 'moment'
+import jose from 'node-jose'
+import path from 'path'
+import { IMyInfoSpec } from './types/myinfo'
+import { ISamlAssertion, IOidcAssertion } from './types/core'
 
-const readFrom = (p) => fs.readFileSync(path.resolve(__dirname, p), 'utf8')
+const readFrom = (p: string) =>
+  fs.readFileSync(path.resolve(__dirname, p), 'utf8')
 
 const TEMPLATE = readFrom('../static/saml/unsigned-assertion.xml')
 const corpPassTemplate = readFrom('../static/saml/corppass.xml')
@@ -15,19 +18,19 @@ const defaultAudience =
   process.env.SERVICE_PROVIDER_ENTITY_ID ||
   'http://sp.example.com/demo1/metadata.php'
 
-const hashAccessToken = (accessToken) => {
+const hashAccessToken = (accessToken: string): string => {
   const fullHash = crypto.createHash('sha256')
   fullHash.update(accessToken, 'utf8')
   const fullDigest = fullHash.digest()
   return fullDigest.slice(0, fullDigest.length / 2).toString('base64')
 }
 
-const myinfo = {
+export const myinfo: { v2: IMyInfoSpec; v3: IMyInfoSpec } = {
   v2: JSON.parse(readFrom('../static/myinfo/v2.json')),
   v3: JSON.parse(readFrom('../static/myinfo/v3.json')),
 }
 
-const saml = {
+export const saml: ISamlAssertion = {
   singPass: [
     'S8979373D',
     'S8116474F',
@@ -112,7 +115,7 @@ const saml = {
   },
 }
 
-const oidc = {
+export const oidc: IOidcAssertion = {
   singPass: [
     'S8979373D',
     'S8116474F',
@@ -248,12 +251,14 @@ const oidc = {
         path.resolve(__dirname, '../static/certs/spcp-key.pem'),
       )
       const signingKey = await jose.JWK.asKey(signingPem, 'pem')
-      const accessToken = await jose.JWS.createSign(
+      const accessTokenResult = await jose.JWS.createSign(
         { format: 'compact' },
         signingKey,
       )
         .update(JSON.stringify(accessTokenClaims))
         .final()
+      // TODO: is this change okay?
+      const accessToken = JSON.stringify(accessTokenResult)
 
       const accessTokenHash = hashAccessToken(accessToken)
 
@@ -277,15 +282,6 @@ const oidc = {
   },
 }
 
-const singPassNric = process.env.MOCKPASS_NRIC || saml.singPass[0]
-const corpPassNric = process.env.MOCKPASS_NRIC || saml.corpPass[0].nric
-const uen = process.env.MOCKPASS_UEN || saml.corpPass[0].uen
-
-module.exports = {
-  saml,
-  oidc,
-  myinfo,
-  singPassNric,
-  corpPassNric,
-  uen,
-}
+export const singPassNric = process.env.MOCKPASS_NRIC || saml.singPass[0]
+export const corpPassNric = process.env.MOCKPASS_NRIC || saml.corpPass[0].nric
+export const uen = process.env.MOCKPASS_UEN || saml.corpPass[0].uen
