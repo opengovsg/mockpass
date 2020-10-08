@@ -62,7 +62,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.7",
     "nodemon": "^2.0.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^4.0.3"
   },
   "husky": {
     "hooks": {
