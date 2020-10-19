@@ -33,7 +33,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "base-64": "^0.1.0",
+    "base-64": "^1.0.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^8.1.0",
     "expiry-map": "^1.1.0",
