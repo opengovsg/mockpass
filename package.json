@@ -48,7 +48,7 @@
     "xml-crypto": "^2.0.0",
     "xml-encryption": "^1.2.0",
     "xmldom": "^0.3.0",
-    "xpath": "0.0.30"
+    "xpath": "0.0.31"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
