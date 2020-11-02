@@ -4,4 +4,5 @@ node_js:
 
 script:
   - npm run lint
+  - npm_config_yes=true npx lockfile-lint --type npm --path package-lock.json --validate-https --allowed-hosts npm
   - npx commitlint-travis
