@@ -25,4 +25,3 @@ jobs:
       - run: npm ci
       - run: npx lockfile-lint --type npm --path package-lock.json --validate-https --allowed-hosts npm
       - run: npm run lint
-      - uses: wagoid/commitlint-github-action@v2
