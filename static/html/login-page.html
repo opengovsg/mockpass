@@ -170,27 +170,36 @@
                                                                 Select username
                                                                 </button>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                    {{#.}}
+                                                                    {{#values}}
                                                                         <li><a href = "{{ assertURL }}">{{ id }}</a></li>
-                                                                    {{/.}}
-                                                                </div>
-                                                            </div>
-                                                            <br>
-                                                            <div class="clearfix"></div>
-                                                            <div class="login__footer">
-                                                                <div class="login-note">
-                                                                     Forgot <a aria-label="Forgot MockPass ID">MockPass ID</a> or <a aria-label="Forgot password">password</a>?
-                                                                </div>
-                                                                <div class="sp-reglink">
-                                                                    Don't have an account? <a aria-label="Register now">Register now</a>
+                                                                    {{/values}}
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     <div>
 
                                                     <input type="hidden" name="CSRFToken" value="null" />
                                                     </div>
+                                                    </form>
+                                                    <form action="{{assertEndpoint}}" method="get">
+                                                        <br>
+                                                        {{#assertEndpoint}}
+                                                            <h6>or with your own user</h6>
+                                                            <br>
+                                                            <input type="hidden" name="RelayState" value="{{ relayState }}" />
+                                                            <input maxlength="9" name="SAMLart" placeholder="NRIC" value="S1234567A" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
+                                                            <button autofocus="" type="submit">Login</button>
+                                                            <br>
+                                                            <br>
+                                                        {{/assertEndpoint}}
+                                                        <div class="login__footer">
+                                                            <div class="login-note">
+                                                                 Forgot <a aria-label="Forgot MockPass ID">MockPass ID</a> or <a aria-label="Forgot password">password</a>?
+                                                            </div>
+                                                            <div class="sp-reglink">
+                                                                Don't have an account? <a aria-label="Register now">Register now</a>
+                                                            </div>
+                                                        </div>                                                        
                                                     </form>
                                                 </div>
                                                 <div class="clearfix"></div>
