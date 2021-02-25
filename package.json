@@ -1,10 +1,10 @@
 {
   "name": "@opengovsg/mockpass",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "description": "A mock SingPass/CorpPass server for dev purposes",
   "main": "index.js",
   "bin": {
-    "mockpass": "./index.js"
+    "mockpass": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
