@@ -45,7 +45,7 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
-    "mustache": "^4.0.0",
+    "mustache": "^4.2.0",
     "node-jose": "^2.0.0",
     "uuid": "^8.0.0",
     "xml-crypto": "^2.1.2",
