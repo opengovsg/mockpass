@@ -48,7 +48,7 @@
     "mustache": "^4.0.0",
     "node-jose": "^2.0.0",
     "uuid": "^8.0.0",
-    "xml-crypto": "^2.1.1",
+    "xml-crypto": "^2.1.2",
     "xml-encryption": "^1.2.3",
     "xmldom": "^0.6.0",
     "xpath": "0.0.32"
