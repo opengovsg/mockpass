@@ -1,0 +1,12 @@
+pull_request_rules:
+  - name: command dependabot to squash and merge
+    conditions:
+      - 'author=dependabot[bot]'
+      - '#check-failure=0'
+      - 'title~=bump [^\s]+ from ([\d]+)\..+ to \1\.'
+      - 'base=dependabot'
+    actions:
+      review:
+        type: APPROVE
+      comment:
+        message: "@dependabot squash and merge"
