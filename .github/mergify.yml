@@ -2,7 +2,7 @@ pull_request_rules:
   - name: command dependabot to squash and merge
     conditions:
       - 'author=dependabot[bot]'
-      - '#check-failure=0'
+      - 'check-success~=CI'
       - 'title~=bump [^\s]+ from ([\d]+)\..+ to \1\.'
       - 'base=dependabot'
     actions:
