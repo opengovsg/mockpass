@@ -8,5 +8,5 @@ pull_request_rules:
     actions:
       review:
         type: APPROVE
-      comment:
-        message: "@dependabot squash and merge"
+      merge:
+        method: squash
