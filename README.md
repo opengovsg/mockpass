@@ -35,6 +35,11 @@ MyInfo:
  - http://localhost:5156/myinfo/{v2,v3}/token
  - http://localhost:5156/myinfo/{v2,v3}/person
 
+sgID:
+ - http://localhost:5156/sgid/v1/oauth/authorize
+ - http://localhost:5156/sgid/v1/oauth/token
+ - http://localhost:5156/sgid/v1/oauth/userinfo
+
 Provide your application with the `spcp*` certs found in `static/certs`
 and with application certs at `static/certs/{key.pem|server.crt}`
 
