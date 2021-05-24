@@ -38,7 +38,7 @@
   "dependencies": {
     "base-64": "^1.0.0",
     "cookie-parser": "^1.4.3",
-    "dotenv": "^9.0.0",
+    "dotenv": "^10.0.0",
     "expiry-map": "^1.1.0",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.4.0",
