@@ -1,6 +1,6 @@
 {
   "name": "@opengovsg/mockpass",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "description": "A mock SingPass/CorpPass server for dev purposes",
   "main": "index.js",
   "bin": {
