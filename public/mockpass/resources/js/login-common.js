@@ -768,6 +768,31 @@ function invalidLoginAction(errorMessage, captchaVal) {
     }
 }
 
+function hexEncode(str) {
+    var result = '';
+    for (var i = 0; i < str.length; i++) {
+        result += str.charCodeAt(i).toString(16);
+    }
+    return result;
+}
+
+function hexToBase64(hexString) {
+    return btoa(hexString.match(/\w{2}/g).map(function(a) {
+        return String.fromCharCode(parseInt(a, 16));
+    }).join(''));
+}
+
+function generateSamlArtFromCustomNric() {
+    var customNric = document.getElementById('customNric').value;
+    if (customNric.length !== 9) {
+        return false;
+    }
+    var hashedPartnerId = document.getElementById('hashedPartnerId').value;
+    var artifactDataHex = '00040000' + hashedPartnerId + hexEncode('customNric:' + customNric);
+    document.getElementById('customNricSamlArt').value = hexToBase64(artifactDataHex);
+    return true;
+}
+
 /*******************************************************************************
  * WOGAA RELATED METHODS STARTS
  ******************************************************************************/

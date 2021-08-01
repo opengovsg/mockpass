@@ -181,13 +181,15 @@
                                                     <input type="hidden" name="CSRFToken" value="null" />
                                                     </div>
                                                     </form>
-                                                    <form action="{{assertEndpoint}}" method="get">
+                                                    <form action="{{assertEndpoint}}" method="get" onsubmit="return generateSamlArtFromCustomNric()">
                                                         <br>
                                                         {{#assertEndpoint}}
                                                             <h6>or with your own user</h6>
                                                             <br>
                                                             <input type="hidden" name="RelayState" value="{{ relayState }}" />
-                                                            <input maxlength="9" name="SAMLart" placeholder="NRIC" value="S1234567A" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
+                                                            <input type="hidden" id="hashedPartnerId" value="{{ hashedPartnerId }}" />
+                                                            <input minlength="9" maxlength="9" id="customNric" placeholder="NRIC" value="S1234567A" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
+                                                            <input type="hidden" id="customNricSamlArt" name="SAMLart" />
                                                             <button autofocus="" type="submit">Login</button>
                                                             <br>
                                                             <br>
