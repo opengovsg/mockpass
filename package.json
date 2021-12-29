@@ -36,7 +36,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@xmldom/xmldom": "^0.7.2",
+    "@xmldom/xmldom": "^0.8.0",
     "base-64": "^1.0.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^10.0.0",
@@ -54,16 +54,16 @@
     "xpath": "0.0.32"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@commitlint/travis-cli": "^13.1.0",
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/travis-cli": "^16.0.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
-    "lint-staged": "^11.0.0",
+    "lint-staged": "^12.0.2",
     "nodemon": "^2.0.4",
     "pinst": "^2.1.6",
     "prettier": "^2.0.5"
