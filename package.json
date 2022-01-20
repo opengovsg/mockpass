@@ -50,7 +50,7 @@
     "node-jose": "^2.0.0",
     "uuid": "^8.0.0",
     "xml-crypto": "^2.1.2",
-    "xml-encryption": "^1.2.4",
+    "xml-encryption": "^2.0.0",
     "xpath": "0.0.32"
   },
   "devDependencies": {
