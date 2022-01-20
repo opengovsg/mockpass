@@ -39,7 +39,7 @@
     "@xmldom/xmldom": "^0.8.0",
     "base-64": "^1.0.0",
     "cookie-parser": "^1.4.3",
-    "dotenv": "^10.0.0",
+    "dotenv": "^14.2.0",
     "expiry-map": "^1.1.0",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.4.0",
@@ -50,7 +50,7 @@
     "node-jose": "^2.0.0",
     "uuid": "^8.0.0",
     "xml-crypto": "^2.1.2",
-    "xml-encryption": "^1.2.4",
+    "xml-encryption": "^2.0.0",
     "xpath": "0.0.32"
   },
   "devDependencies": {
