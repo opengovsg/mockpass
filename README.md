@@ -59,7 +59,7 @@ $ export MOCKPASS_PORT=5156
 $ export MOCKPASS_NRIC=S8979373D
 $ export MOCKPASS_UEN=123456789A
 
-$ export SHOW_LOGIN_PAGE=true # Optional, defaults to `false`
+$ export SHOW_LOGIN_PAGE=true # Optional, defaults to `false`; can be overridden per request using `X-Show-Login-Page` HTTP header
 
 # Disable signing/encryption (Optional, by default `true`)
 $ export SIGN_ASSERTION=false
