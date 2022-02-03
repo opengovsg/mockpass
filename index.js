@@ -62,10 +62,7 @@ const options = {
     },
   },
   showLoginPage: (req) => {
-    if (req.header('X-Show-Login-Page')) {
-      return req.header('X-Show-Login-Page') === 'true'
-    }
-    return process.env.SHOW_LOGIN_PAGE === 'true'
+    return process.env.SHOW_LOGIN_PAGE === 'true' || req.header('X-Show-Login-Page') === 'true'
   },
   encryptMyInfo: process.env.ENCRYPT_MYINFO === 'true',
   cryptoConfig,
