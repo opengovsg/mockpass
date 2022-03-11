@@ -9765,6 +9765,12 @@
           "value": "97399245"
         }
       },
+      "uuid": {
+        "lastupdated": "2020-04-16",
+        "source": "1",
+        "classification": "C",
+        "value": "b6cb9308-733b-42b3-ad38-9b5afc890206"
+      },
       "mailadd": {
         "country": {
           "code": "SG",
@@ -27681,7 +27687,7 @@
         "lastupdated": "2020-04-16",
         "source": "1",
         "classification": "C",
-        "value": ""
+        "value": "632d6cd6-7125-4fcc-b21b-e33aedf05806"
       },
       "mailadd": {
         "country": {
