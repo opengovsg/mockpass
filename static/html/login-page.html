@@ -176,33 +176,38 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    <div>
-
-                                                    <input type="hidden" name="CSRFToken" value="null" />
-                                                    </div>
+                                                        <div>
+                                                            <input type="hidden" name="CSRFToken" value="null" />
+                                                        </div>
                                                     </form>
-                                                    <form action="{{assertEndpoint}}" method="get" onsubmit="return generateSamlArtFromCustomNric()">
+                                                    {{#customProfileConfig}}
+                                                    <form action="{{endpoint}}" class="innate-form" method="get">
                                                         <br>
-                                                        {{#assertEndpoint}}
-                                                            <h6>or with your own user</h6>
-                                                            <br>
-                                                            <input type="hidden" name="RelayState" value="{{ relayState }}" />
-                                                            <input type="hidden" id="hashedPartnerId" value="{{ hashedPartnerId }}" />
-                                                            <input minlength="9" maxlength="9" id="customNric" placeholder="NRIC" value="S1234567A" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
-                                                            <input type="hidden" id="customNricSamlArt" name="SAMLart" />
-                                                            <button autofocus="" type="submit">Login</button>
-                                                            <br>
-                                                            <br>
-                                                        {{/assertEndpoint}}
-                                                        <div class="login__footer">
-                                                            <div class="login-note">
-                                                                 Forgot <a aria-label="Forgot MockPass ID">MockPass ID</a> or <a aria-label="Forgot password">password</a>?
-                                                            </div>
-                                                            <div class="sp-reglink">
-                                                                Don't have an account? <a aria-label="Register now">Register now</a>
-                                                            </div>
-                                                        </div>                                                        
+                                                        <h6>or with your own user</h6>
+
+                                                        <input type="text" name="nric" placeholder="NRIC" value="S1234567A" minlength="9" maxlength="9">
+                                                        {{#showUuid}}<input type="text" name="uuid" placeholder="UUID" value="ef39a074-b64d-4990-a937-6f80772e2bb8" minlength="36" maxlength="36">{{/showUuid}}
+                                                        {{#showUen}}<input type="text" name="uen" placeholder="UEN" value="123456789D" minlength="9" maxlength="10">{{/showUen}}
+
+                                                        {{#assertEndpoint}}<input type="hidden" name="assertEndpoint" value="{{ assertEndpoint }}" />{{/assertEndpoint}}
+                                                        {{#redirectURI}}<input type="hidden" name="redirectURI" value="{{ redirectURI }}" />{{/redirectURI}}
+                                                        {{#relayState}}<input type="hidden" name="relayState" value="{{ relayState }}" />{{/relayState}}
+                                                        {{#state}}<input type="hidden" name="state" value="{{ state }}" />{{/state}}
+                                                        {{#nonce}}<input type="hidden" name="nonce" value="{{ nonce }}" />{{/nonce}}
+
+                                                        <button autofocus="" type="submit">Login</button>
+                                                        <br>
                                                     </form>
+                                                    {{/customProfileConfig}}
+                                                    <br>
+                                                    <div class="login__footer">
+                                                        <div class="login-note">
+                                                            Forgot <a aria-label="Forgot MockPass ID">MockPass ID</a> or <a aria-label="Forgot password">password</a>?
+                                                        </div>
+                                                        <div class="sp-reglink">
+                                                            Don't have an account? <a aria-label="Register now">Register now</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
