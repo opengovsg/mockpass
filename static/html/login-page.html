@@ -184,10 +184,20 @@
                                                     <form action="{{endpoint}}" class="innate-form" method="get">
                                                         <br>
                                                         <h6>or with your own user</h6>
+                                                        <br>
 
-                                                        <input type="text" name="nric" placeholder="NRIC" value="S1234567A" minlength="9" maxlength="9">
-                                                        {{#showUuid}}<input type="text" name="uuid" placeholder="UUID" value="ef39a074-b64d-4990-a937-6f80772e2bb8" minlength="36" maxlength="36">{{/showUuid}}
-                                                        {{#showUen}}<input type="text" name="uen" placeholder="UEN" value="123456789D" minlength="9" maxlength="10">{{/showUen}}
+                                                        <label for="nric">NRIC</label>
+                                                        <input type="text" name="nric" id="nric" value="S1234567A" minlength="9" maxlength="9">
+
+                                                        {{#showUuid}}
+                                                        <label for="uuid">UUID</label>
+                                                        <input type="text" name="uuid" id="uuid" value="ef39a074-b64d-4990-a937-6f80772e2bb8" minlength="36" maxlength="36">
+                                                        {{/showUuid}}
+
+                                                        {{#showUen}}
+                                                        <label for="uen">UEN</label>
+                                                        <input type="text" name="uen" id="uen" value="123456789D" minlength="9" maxlength="10">
+                                                        {{/showUen}}
 
                                                         {{#assertEndpoint}}<input type="hidden" name="assertEndpoint" value="{{ assertEndpoint }}" />{{/assertEndpoint}}
                                                         {{#redirectURI}}<input type="hidden" name="redirectURI" value="{{ redirectURI }}" />{{/redirectURI}}
