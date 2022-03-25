@@ -3,7 +3,18 @@ const fs = require('fs')
 const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
+const https = require('https')
+// import https, { ServerOptions } from 'https';
+// import pem from 'pem';
+const pem = require('pem')
+
 require('dotenv').config()
+
+// Certificate properties
+const certProps = {
+  days: 3650, // Validity in days
+  selfSigned: true,
+}
 
 const {
   configSAML,
@@ -66,22 +77,31 @@ const options = {
   cryptoConfig,
 }
 
-const app = express()
-app.use(morgan('combined'))
+pem.createCertificate(certProps, (error, keys) => {
+  if (error) {
+    throw error
+  }
+  const credentials = { key: keys.serviceKey, cert: keys.certificate }
 
-configSAML(app, options)
-configOIDC(app, options)
-configSGID(app, options)
+  const app = express()
+  app.use(morgan('combined'))
 
-configMyInfo.consent(app)
-configMyInfo.v2(app, options)
-configMyInfo.v3(app, options)
+  configSAML(app, options)
+  configOIDC(app, options)
+  configSGID(app, options)
 
-app.enable('trust proxy')
-app.use(express.static(path.join(__dirname, 'public')))
+  configMyInfo.consent(app)
+  configMyInfo.v2(app, options)
+  configMyInfo.v3(app, options)
 
-app.listen(PORT, (err) =>
-  err
-    ? console.error('Unable to start MockPass', err)
-    : console.warn(`MockPass listening on ${PORT}`),
-)
+  app.enable('trust proxy')
+  app.use(express.static(path.join(__dirname, 'public')))
+
+  const httpsServer = https.createServer(credentials, app)
+
+  httpsServer.listen(PORT, (err) =>
+    err
+      ? console.error('Unable to start MockPass', err)
+      : console.warn(`MockPass listening on ${PORT}`),
+  )
+})
