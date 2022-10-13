@@ -49,7 +49,7 @@
     "mustache": "^4.2.0",
     "node-jose": "^2.0.0",
     "uuid": "^8.0.0",
-    "xml-crypto": "^2.1.2",
+    "xml-crypto": "^3.0.0",
     "xml-encryption": "^2.0.0",
     "xpath": "0.0.32"
   },
