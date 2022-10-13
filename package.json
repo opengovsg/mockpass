@@ -54,7 +54,7 @@
     "xpath": "0.0.32"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.1",
+    "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@commitlint/travis-cli": "^17.1.2",
     "commitizen": "^4.2.4",
