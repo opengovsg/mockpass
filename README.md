@@ -18,22 +18,18 @@ A mock SingPass/CorpPass/MyInfo server for dev purposes
 Configure your application to point to the following endpoints:
 
 SingPass:
- - http://localhost:5156/singpass/logininitial - SAML login redirect with optional page
- - http://localhost:5156/singpass/soap - receives SAML artifact and returns assertion
  - http://localhost:5156/singpass/authorize - OIDC login redirect with optional page
  - http://localhost:5156/singpass/token - receives OIDC authorization code and returns id_token
 
 CorpPass:
- - http://localhost:5156/corppass/logininitial
- - http://localhost:5156/corppass/soap
  - http://localhost:5156/corppass/authorize - OIDC login redirect with optional page
  - http://localhost:5156/corppass/token - receives OIDC authorization code and returns id_token
 
 MyInfo:
- - http://localhost:5156/myinfo/{v2,v3}/person-basic (exclusive to government systems)
- - http://localhost:5156/myinfo/{v2,v3}/authorise
- - http://localhost:5156/myinfo/{v2,v3}/token
- - http://localhost:5156/myinfo/{v2,v3}/person
+ - http://localhost:5156/myinfo/v3/person-basic (exclusive to government systems)
+ - http://localhost:5156/myinfo/v3/authorise
+ - http://localhost:5156/myinfo/v3/token
+ - http://localhost:5156/myinfo/v3/person
 
 sgID:
  - http://localhost:5156/sgid/v1/oauth/authorize
@@ -48,11 +44,6 @@ Alternatively, provide the paths to your app cert as env vars
 
 ```
 $ npm install @opengovsg/mockpass
-
-# Some familiarity with SAML Artifact Binding is assumed
-# Optional: Configure where MockPass should send SAML artifact to, default endpoint will be `PartnerId` in request query parameter.
-$ export SINGPASS_ASSERT_ENDPOINT=http://localhost:5000/singpass/assert
-$ export CORPPASS_ASSERT_ENDPOINT=http://localhost:5000/corppass/assert
 
 # All values shown here are defaults
 $ export MOCKPASS_PORT=5156
@@ -69,7 +60,7 @@ $ export ENCRYPT_ASSERTION=false
 $ export SIGN_RESPONSE=false
 $ export RESOLVE_ARTIFACT_REQUEST_SIGNED=false
 
-# Encrypt payloads returned by /myinfo/*/{person, person-basic},
+# Encrypt payloads returned by /myinfo/v3/{person, person-basic},
 # equivalent to MyInfo Auth Level L2 (testing and production)
 $ export ENCRYPT_MYINFO=false
 
@@ -89,7 +80,7 @@ who then need to connect to the staging servers hosted by SingPass/CorpPass,
 which may not always be available (eg, down for maintenance, or no Internet).
 
 MockPass tries to solves this by providing an extremely lightweight implementation
-of a SAML 2.0 Identity Provider that returns mock SingPass and CorpPass assertions.
+of an OIDC Provider that returns mock SingPass and CorpPass assertions.
 It optionally provides a mock login page that (badly) mimics the SingPass/CorpPass
 login experience.
 
