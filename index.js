@@ -5,12 +5,7 @@ const morgan = require('morgan')
 const path = require('path')
 require('dotenv').config()
 
-const {
-  configSAML,
-  configOIDC,
-  configMyInfo,
-  configSGID,
-} = require('./lib/express')
+const { configOIDC, configMyInfo, configSGID } = require('./lib/express')
 
 const PORT = process.env.MOCKPASS_PORT || process.env.PORT || 5156
 
@@ -49,18 +44,6 @@ const cryptoConfig = {
 
 const options = {
   serviceProvider,
-  idpConfig: {
-    singPass: {
-      id:
-        process.env.SINGPASS_IDP_ID || 'http://localhost:5156/singpass/saml20',
-      assertEndpoint: process.env.SINGPASS_ASSERT_ENDPOINT,
-    },
-    corpPass: {
-      id:
-        process.env.CORPPASS_IDP_ID || 'http://localhost:5156/corppass/saml20',
-      assertEndpoint: process.env.CORPPASS_ASSERT_ENDPOINT,
-    },
-  },
   showLoginPage: (req) =>
     (req.header('X-Show-Login-Page') || process.env.SHOW_LOGIN_PAGE) === 'true',
   encryptMyInfo: process.env.ENCRYPT_MYINFO === 'true',
@@ -70,12 +53,10 @@ const options = {
 const app = express()
 app.use(morgan('combined'))
 
-configSAML(app, options)
 configOIDC(app, options)
 configSGID(app, options)
 
 configMyInfo.consent(app)
-configMyInfo.v2(app, options)
 configMyInfo.v3(app, options)
 
 app.enable('trust proxy')
