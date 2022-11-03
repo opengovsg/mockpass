@@ -75,7 +75,6 @@ configOIDC(app, options)
 configSGID(app, options)
 
 configMyInfo.consent(app)
-configMyInfo.v2(app, options)
 configMyInfo.v3(app, options)
 
 app.enable('trust proxy')
