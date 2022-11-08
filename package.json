@@ -36,7 +36,6 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.0",
     "base-64": "^1.0.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^16.0.0",
