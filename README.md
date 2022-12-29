@@ -17,13 +17,25 @@ A mock SingPass/CorpPass/MyInfo server for dev purposes
 
 Configure your application to point to the following endpoints:
 
-SingPass:
+SingPass (v1 - Singpass OIDC):
  - http://localhost:5156/singpass/authorize - OIDC login redirect with optional page
  - http://localhost:5156/singpass/token - receives OIDC authorization code and returns id_token
 
-CorpPass:
+SingPass (v2 - NDI OIDC):
+ - http://localhost:5156/singpass/v2/authorize - OIDC login redirect with optional page
+ - http://localhost:5156/singpass/v2/token - receives OIDC authorization code and returns id_token
+ - http://localhost:5156/singpass/v2/.well-known/openid-configuration - OpenID discovery endpoint
+ - http://localhost:5156/singpass/v2/.well-known/keys - JWKS endpoint which exposes the auth provider's signing keys
+
+CorpPass (v1 - Corppass OIDC):
  - http://localhost:5156/corppass/authorize - OIDC login redirect with optional page
  - http://localhost:5156/corppass/token - receives OIDC authorization code and returns id_token
+
+CorpPass (v2 - Corppass OIDC):
+ - http://localhost:5156/corppass/v2/authorize - OIDC login redirect with optional page
+ - http://localhost:5156/corppass/v2/token - receives OIDC authorization code and returns id_token
+ - http://localhost:5156/corppass/v2/.well-known/openid-configuration - OpenID discovery endpoint
+ - http://localhost:5156/corppass/v2/.well-known/keys - JWKS endpoint which exposes the auth provider's signing keys
 
 MyInfo:
  - http://localhost:5156/myinfo/v3/person-basic (exclusive to government systems)
@@ -41,6 +53,11 @@ and with application certs at `static/certs/{key.pem|server.crt}`
 
 Alternatively, provide the paths to your app cert as env vars
 `SERVICE_PROVIDER_CERT_PATH` and `SERVICE_PROVIDER_PUB_KEY`
+
+If you are integrating with Singpass NDI OIDC and/or Corppass v2 OIDC, you should 
+provide your well-known key endpoints as env vars `SP_RP_JWKS_ENDPOINT` and/or
+`CP_RP_JWKS_ENDPOINT` respectively. Alternatively, provide your application with
+the `oidc-v2-rp-*.json` JWKS.
 
 ```
 $ npm install @opengovsg/mockpass
