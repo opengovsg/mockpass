@@ -44,9 +44,11 @@ MyInfo:
  - http://localhost:5156/myinfo/v3/person
 
 sgID:
- - http://localhost:5156/sgid/v1/oauth/authorize
- - http://localhost:5156/sgid/v1/oauth/token
- - http://localhost:5156/sgid/v1/oauth/userinfo
+ - http://localhost:5156/v2/oauth/authorize
+ - http://localhost:5156/v2/oauth/token
+ - http://localhost:5156/v2/oauth/userinfo
+ - http://localhost:5156/v2/.well-known/openid-configuration - OpenID discovery endpoint
+ - http://localhost:5156/v2/.well-known/jwks.json - JWKS endpoint which exposes the auth provider's signing keys
 
 Provide your application with the `spcp*` certs found in `static/certs`
 and with application certs at `static/certs/{key.pem|server.crt}`
