@@ -391,6 +391,22 @@ function myTrim(x) {
 }
 
 /**
+ * This method listens to changes in userID entry to redirect user when id is clicked
+ */
+function redirectID() {
+    const idInput = document.getElementById("id-input");
+    const optionsList = document.getElementById("id-datalist");
+    let optionsMap = new Map();
+    for (let i=0; i<optionsList.options.length; i++) {
+        optionsMap.set(optionsList.options[i].value, optionsList.options[i].dataset.assertURL);
+    }
+    if (optionsMap.has(idInput.value)) {
+        const assertURL = optionsMap.get(idInput.value);
+        window.location.href = assertURL;
+    }
+}
+
+/**
  * This is generic method called for onkeypress action.
  * 
  * @param e

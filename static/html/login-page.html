@@ -166,14 +166,12 @@
                                                             <div class="login-label">Log in</div>
                                                             <br>
                                                             <div class="dropdown" style="width: 100%; ">
-                                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
-                                                                Select username
-                                                                </button>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <input id="id-input" list="id-datalist" class="btn btn-secondary dropdown-toggle" oninput="redirectID()" placeholder= "Select Username" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
+                                                                <datalist class="dropdown-menu" id="id-datalist" aria-labelledby="id-input" >
                                                                     {{#values}}
-                                                                        <li><a href = "{{ assertURL }}">{{ id }}</a></li>
+                                                                        <option value="{{ id }}" data-assertURL="{{ assertURL }}">{{ id }}</option>
                                                                     {{/values}}
-                                                                </div>
+                                                                </datalist>
                                                             </div>
                                                         </div>
                                                         <div>
