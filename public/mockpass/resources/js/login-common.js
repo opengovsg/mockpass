@@ -398,7 +398,7 @@ function redirectID() {
     const optionsList = document.getElementById("id-datalist");
     let optionsMap = new Map();
     for (let i=0; i<optionsList.options.length; i++) {
-        optionsMap.set(optionsList.options[i].value, optionsList.options[i].dataset.assertURL);
+        optionsMap.set(optionsList.options[i].value, optionsList.options[i].dataset.asserturl);
     }
     if (optionsMap.has(idInput.value)) {
         const assertURL = optionsMap.get(idInput.value);
