@@ -48,7 +48,7 @@
     "mustache": "^4.2.0",
     "node-jose": "^2.0.0",
     "uuid": "^9.0.0",
-    "xpath": "0.0.32"
+    "xpath": "0.0.33"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
