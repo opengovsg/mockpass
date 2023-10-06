@@ -7,6 +7,15 @@
       "kid": "sig-1655709297",
       "x": "AWuSHLkeP89DOkPaTs6MUDTFX1oL_Nr2rsJxCUyWL9x4LDEwtGXxWmw5-KhJSKauwJL2fAiNribZa2E0EZ-A4DzL",
       "y": "AHoghl5OGyp7Vejt2sqYW7z2G_gTGBDR9q-ylLjnERpKd7-kHybLEutkwp5tmkhhlOysCcXE7vpTcnwxeQPa3zN0"
-    }     
+    },
+    {
+      "kty": "EC",
+      "use": "sig",
+      "crv": "P-256",
+      "kid": "ndi_mock_01",
+      "x": "ZyAP_T3GS6tzdEfIKgj7Z_TkKWQ9AQAU7LNTSV_JICQ",
+      "y": "gxQgPvGD8ASZT7DT41pgWP4ZHiZ_7HGcMoDM0NEOfO8",
+      "alg": "ES256"
+    }
   ]
 }
