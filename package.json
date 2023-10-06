@@ -47,8 +47,7 @@
     "morgan": "^1.9.1",
     "mustache": "^4.2.0",
     "node-jose": "^2.0.0",
-    "uuid": "^9.0.0",
-    "xpath": "0.0.32"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
