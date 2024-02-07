@@ -2,13 +2,13 @@
   "name": "@opengovsg/mockpass",
   "version": "4.0.11",
   "description": "A mock SingPass/CorpPass server for dev purposes",
-  "main": "index.js",
+  "main": "app.js",
   "bin": {
     "mockpass": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon",
+    "start": "nodemon index",
     "cz": "git-cz",
     "lint": "eslint lib",
     "lint-fix": "eslint --fix lib",
