@@ -35,12 +35,15 @@ const cryptoConfig = {
     process.env.RESOLVE_ARTIFACT_REQUEST_SIGNED !== 'false',
 }
 
+const isStateless = process.env.MOCKPASS_STATELESS === 'true'
+
 const options = {
   serviceProvider,
   showLoginPage: (req) =>
     (req.header('X-Show-Login-Page') || process.env.SHOW_LOGIN_PAGE) === 'true',
   encryptMyInfo: process.env.ENCRYPT_MYINFO === 'true',
   cryptoConfig,
+  isStateless,
 }
 
 const app = express()
@@ -50,7 +53,7 @@ configOIDC(app, options)
 configOIDCv2(app, options)
 configSGID(app, options)
 
-configMyInfo.consent(app)
+configMyInfo.consent(app, options)
 configMyInfo.v3(app, options)
 
 app.enable('trust proxy')
