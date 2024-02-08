@@ -159,6 +159,7 @@ Common configuration:
 | Configuration item | Explanation |
 |---|---|
 | Port number | **Overview:** What port number MockPass will listen for HTTP requests on. <br> **Default:** 5156. <br> **How to configure:** Set the env var `MOCKPASS_PORT` or `PORT` to some port number. |
+| Stateless Mode | **Overview:** Enable for environments where the state of the process is not guaranteed, such as in serverless contexts. <br> **Default:** not set. <br> **How to configure:** Set the env var `MOCKPASS_STATELESS` to `true` or `false`. |
 
 Run MockPass:
 
