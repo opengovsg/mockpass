@@ -41,7 +41,7 @@
     "dotenv": "^16.0.0",
     "expiry-map": "^2.0.0",
     "express": "^4.16.3",
-    "jose": "^4.14.4",
+    "jose": "^5.2.3",
     "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
