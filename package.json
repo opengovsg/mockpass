@@ -52,7 +52,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@commitlint/travis-cli": "^17.1.2",
+    "@commitlint/travis-cli": "^19.0.3",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^8.0.0",
