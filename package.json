@@ -55,7 +55,7 @@
     "@commitlint/travis-cli": "^19.0.3",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^8.0.0",
+    "eslint": "^9.1.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^9.0.11",
