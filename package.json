@@ -12,7 +12,7 @@
     "cz": "git-cz",
     "lint": "eslint lib",
     "lint-fix": "eslint --fix lib",
-    "postinstall": "husky install",
+    "prepare": "node .husky/install.mjs",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
