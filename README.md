@@ -84,7 +84,7 @@ Configure your application (or MockPass) with certificates/keys:
 MockPass accepts any value for `client_id`, `redirect_uri` and `sp_esvcId`.
 The `client_secret` value will be checked if configured, see below.
 
-Only the profiles (NRICs) that have entries in Mockpass' static dataset will
+Only the profiles (NRICs) that have entries in Mockpass' personas dataset will
 succeed, using other NRICs will result in an error. See the list of personas in
 [static/myinfo/v3.json](static/myinfo/v3.json).
 
@@ -119,9 +119,18 @@ Configure your application (or MockPass) with certificates/keys:
 
 MockPass accepts any value for `client_id`, `client_secret` and `redirect_uri`.
 
-Only the profiles (NRICs) that have entries in Mockpass' static dataset will
+Only the profiles (NRICs) that have entries in Mockpass' personas dataset will
 succeed, using other NRICs will result in an error. See the list of personas in 
 [static/myinfo/v3.json](static/myinfo/v3.json).
+
+If the Public Officer Employment Details data item is requested, the 
+`pocdex.public_officer_details` scope data is sourced from the
+`publicofficerdetails` data key (where present) on personas.
+Most personas do not have this data key configured, and will result in a `"NA"`
+response instead of an stringified array. As these personas are not identified
+in the login page dropdown, please check the personas dataset linked above to
+identify them.
+The `pocdex.number_of_employments` scope is not supported.
 
 | Configuration item | Explanation |
 |---|---|
