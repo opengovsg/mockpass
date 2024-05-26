@@ -4,6 +4,8 @@ WORKDIR /usr/src/mockpass
 
 COPY package* ./
 
+COPY ./.husky ./.husky
+
 RUN npm ci
 
 COPY . ./
