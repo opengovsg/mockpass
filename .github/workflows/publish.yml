@@ -29,6 +29,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
           registry-url: https://registry.npmjs.org/
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Login to Docker Hub
@@ -41,6 +43,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
+          platforms: |
+            linux/arm64/v8
+            linux/amd64
           tags: |
             opengovsg/mockpass:latest
             opengovsg/mockpass:${{ env.TAGNAME }}
