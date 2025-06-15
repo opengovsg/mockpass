@@ -1,6 +1,6 @@
 # MockPass
 
-A mock Singpass/Corppass/Myinfo v3/sgID v2 server for dev purposes
+A mock Singpass/Corppass/Myinfo v3/sgID v2/Sign v3 server for dev purposes
 
 ## Quick Start (hosted remotely on Gitpod)
 
@@ -163,6 +163,19 @@ format as env var `SERVICE_PROVIDER_CERT_PATH` when running MockPass.
 Self-signed or untrusted certificates are supported.
 Alternatively, provide your application with the certificate and private key
 from `static/certs/(server.crt|key.pem)`.
+
+### Sign v3
+Configure your application with mock sign v3 urls:
+- http://localhost:5156/sign-v3/sign-requests
+- http://localhost:5156/sign-v3/sign-requests/:request_id/signed-doc
+- http://localhost:5156/sign-v3/jwks
+
+Configure MockPass with your application client details:
+- Client ID: SIGNV3_CLIENT_ID, default mockpass-sign-v3-client
+- JWKS URL: SIGNV3_CLIENT_JWKS_URL, default http://localhost:4000/jwks
+- Redirect URL: SIGNV3_CLIENT_REDIRECT_URL, default http://localhost:4000/redirect
+- Webhook URL: SIGNV3_CLIENT_WEBHOOK_URL, default http://localhost:4000/webhook
+- Server host URL: MOCKPASS_SERVER_HOST: default: http://localhost:5156
 
 ### Run MockPass
 
