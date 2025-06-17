@@ -60,5 +60,6 @@ typings/
 # next.js build output
 .next
 
-# VS Code settings
+# IDE
 .vscode/settings.json
+.idea

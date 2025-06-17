@@ -10,6 +10,7 @@ const {
   configOIDCv2,
   configMyInfo,
   configSGID,
+  configSignV3,
 } = require('./lib/express')
 
 const serviceProvider = {
@@ -52,6 +53,7 @@ app.use(morgan('combined'))
 configOIDC(app, options)
 configOIDCv2(app, options)
 configSGID(app, options)
+configSignV3(app, options)
 
 configMyInfo.consent(app, options)
 configMyInfo.v3(app, options)
