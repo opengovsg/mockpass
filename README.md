@@ -21,7 +21,7 @@ Configure your application to point to the following endpoints:
 
 - http://localhost:5156/singpass/v2/.well-known/openid-configuration
 - http://localhost:5156/singpass/v2/.well-known/keys
-- http://localhost:5156/singpass/v2/authorize
+- http://localhost:5156/singpass/v2/auth
 - http://localhost:5156/singpass/v2/token
 
 Configure your application (or MockPass) with keys:
@@ -45,7 +45,7 @@ Configure your application to point to the following endpoints:
 
 - http://localhost:5156/corppass/v2/.well-known/openid-configuration
 - http://localhost:5156/corppass/v2/.well-known/keys
-- http://localhost:5156/corppass/v2/authorize
+- http://localhost:5156/corppass/v2/auth
 - http://localhost:5156/corppass/v2/token
 
 Configure your application (or MockPass) with keys:
