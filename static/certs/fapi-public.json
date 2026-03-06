@@ -1,0 +1,22 @@
+{
+  "keys": [
+    {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "tkRXMLpC7djlH7cqntg8-fuekxG9YTvJx8IsRKApcAg",
+      "y": "elyS0xZn3ymk65tVPYO3pZplEaOEZtj_RegJ3_cwq7A",
+      "kid": "fapi-key-01",
+      "use": "sig",
+      "alg": "ES256"
+    },
+    {
+      "kty": "EC",
+      "x": "fvSpp2PLnde3dtY8VpY881WUxijtSqmhu4daeavEuKQ",
+      "y": "LzH6bK3nxZFPh8tPLjUN0EMYnIgQjkyUiafh4Eafmw8",
+      "crv": "P-256",
+      "use": "enc",
+      "alg": "ECDH-ES+A256KW",
+      "kid": "fapi-enc-key"
+    }
+  ]
+}
