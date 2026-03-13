@@ -34,7 +34,7 @@ Limitations:
 - `client_id` and `redirect_uri` can be set to anything.
 - Mockpass will not check if ephemeral keys, state, and nonce are reused.
 - Only Login is supported for now. Userinfo endpoint is not supported. 
-- Only `openid` is supported for the `scope` parameter.
+- Only `openid` `user.identity` `uinfin` is supported for the `scope` parameter.
 - Only `urn:singpass:authentication:loa:1` is supported for the `acr_values` parameter.
 
 ### Helper functions
