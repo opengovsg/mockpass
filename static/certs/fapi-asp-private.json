@@ -1,0 +1,24 @@
+{
+  "keys": [
+    {
+      "crv": "P-256",
+      "d": "i6SXSFXS82EvOj0vkS2V-4x6ItX79J9FLD79CsSLIks",
+      "kty": "EC",
+      "x": "6L_1vnXNH2IcAQIpTpaZ3LaxNby3j9t3YSQuWFmid8o",
+      "y": "OOTZ53oQxLJGZ0UR0jE4w_NSs7x_OCaz7GMcis53rK8",
+      "use": "sig",
+      "alg": "ES256",
+      "kid": "fapi-asp-sig-key-01"
+    },
+    {
+      "crv": "P-256",
+      "d": "8Kycerjx8N3TLI3a4sllkIET8ZrCyRG9ha3jJrup1gs",
+      "kty": "EC",
+      "x": "yVocAx9MRtU4n59kMmKNvQsri2gBxNX728ID8qMRiSw",
+      "y": "rB8rb1f2IfYD-ByQoa_EXsG2amrhXS8Asvn0Wv1z70c",
+      "use": "enc",
+      "alg": "ECDH-ES+A256KW",
+      "kid": "fapi-asp-enc-key-01"
+    }
+  ]
+}

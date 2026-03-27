@@ -21,14 +21,14 @@ For more information regarding the FAPI flow, refer to: https://docs.developer.s
 
 Configure your endpoint to point to the following endpoints:
 - http://localhost:5156/singpass/v3/fapi/.well-known/openid-configuration
-- http://localhost:5156/singpass/v3/fapi/.well-known/jwks.json
+- http://localhost:5156/singpass/v3/fapi/.well-known/keys
 - http://localhost:5156/singpass/v3/fapi/par
 - http://localhost:5156/singpass/v3/fapi/auth
 - http://localhost:5156/singpass/v3/fapi/token
 
 
-In the `/fapi/utils.js file`, you can configure your client JWKS endpoint in the `fapiClientConfiguration`. By default, it is set to `null` and Mockpass will read the default keys that are stored in the `fapi-private.json` and `fapi-public.json` If configured, Mockpass will attempt to fetch the JWKS from the specified endpoint. 
-Your JWKS endpoint will need to be publicly accessible, and it needs to contain a valid JWKS with a sig key and an enc key.
+In the `/fapi/utils.js file`, you can configure your client JWKS endpoint in the `fapiClientConfiguration`. By default, it is set to `null` and Mockpass will read the default keys that are stored in the `fapi-rp-private.json` and `fapi-rp-public.json` files. If configured, Mockpass will attempt to fetch the JWKS from the specified endpoint. 
+Your JWKS endpoint will need to be publicly accessible, and it needs to contain a valid JWKS with a `sig` key and an `enc` key.
 
 Limitations:
 - `client_id` and `redirect_uri` can be set to anything.
