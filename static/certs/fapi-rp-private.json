@@ -6,6 +6,7 @@
       "y": "elyS0xZn3ymk65tVPYO3pZplEaOEZtj_RegJ3_cwq7A",
       "crv": "P-256",
       "d": "uRwK14a2icjic0DSFsOG2PgKgqfZobaqhjgGS0wbkho",
+      "kid": "fapi-rp-sig-key-01",
       "use": "sig",
       "alg": "ES256"
     },
@@ -17,7 +18,7 @@
       "d": "wqtEFMSkoWeYqfZ-aqbSn5CE2KmgqWZgxrowWQaHCXA",
       "use": "enc",
       "alg": "ECDH-ES+A256KW",
-      "kid": "fapi-enc-key"
+      "kid": "fapi-rp-enc-key-01"
     }
   ]
 }
