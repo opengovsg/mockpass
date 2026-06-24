@@ -1,0 +1,81 @@
+{
+  "S_TEST_AGE_16": {
+    "name": {
+      "lastupdated": "2020-09-10",
+      "source": "1",
+      "classification": "C",
+      "value": "Mock Test User"
+    },
+    "nationality": {
+      "lastupdated": "2020-09-10",
+      "code": "SG",
+      "source": "1",
+      "classification": "C",
+      "desc": "SINGAPORE CITIZEN"
+    },
+    "householdincome": {
+      "lastupdated": "2020-09-10",
+      "high": {
+        "value": 5000
+      },
+      "low": {
+        "value": 0
+      },
+      "source": "2",
+      "classification": "C"
+    },
+    "sex": {
+      "lastupdated": "2020-09-10",
+      "code": "M",
+      "source": "1",
+      "classification": "C",
+      "desc": "Male"
+    },
+    "password": {
+      "lastupdated": "2020-09-10",
+      "source": "1",
+      "classification": "C"
+    },
+    "dynamic_age": 16
+  },
+  "S_TEST_AGE_15": {
+    "name": {
+      "lastupdated": "2020-09-10",
+      "source": "1",
+      "classification": "C",
+      "value": "Phan Sỹ Trọng"
+    },
+    "nationality": {
+      "lastupdated": "2020-09-10",
+      "code": "SG",
+      "source": "1",
+      "classification": "C",
+      "desc": "SINGAPORE CITIZEN"
+    },
+    "householdincome": {
+      "lastupdated": "2020-09-10",
+      "high": {
+        "value": 5000
+      },
+      "low": {
+        "value": 15
+      },
+      "source": "2",
+      "classification": "C"
+    },
+    "sex": {
+      "lastupdated": "2020-09-10",
+      "code": "M",
+      "source": "1",
+      "classification": "C",
+      "desc": "Male"
+    },
+    "password": {
+      "lastupdated": "2020-09-10",
+      "source": "1",
+      "classification": "C",
+      "value": "7c1e4b8f-26d0-40cc-9f4c-0dea2b03a154"
+    },
+    "dynamic_age": 16
+  }
+}

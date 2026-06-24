@@ -60,6 +60,8 @@ configFapi(app, options)
 configMyInfo.consent(app, options)
 configMyInfo.v3(app, options)
 
+app.use('/admin/api', require('./lib/express/admin/index.js'))
+
 app.enable('trust proxy')
 app.use(express.static(path.join(__dirname, 'public')))
 

@@ -1,285 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- <meta charset="utf-8"> -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="description" content="MockPass is a mock SingPass/CorpPass server for dev purposes.">
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <!-- Add to homescreen for Safari on iOS -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-        <link rel="icon" type="img/ico" href="/mockpass/resources/img/favicon.ico">
-        <title>MockPass Login</title>
-        <link rel="stylesheet" type="text/css" href="/mockpass/resources/plugins/bootstrap-3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" media="all">
-        <link rel="stylesheet" type="text/css" href="/mockpass/resources/css/style-main.css" media="all">
-        <link rel="stylesheet" type="text/css" href="/mockpass/resources/css/common.css" media="all">
-        <link rel="stylesheet" type="text/css" href="/mockpass/resources/css/animate.css" media="all">
-        <script src="/mockpass/resources/js/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="/mockpass/resources/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="/mockpass/resources/js/login-common.js"></script>
-    </head>
-    <body>
-        <div class="homepagebody-wrapper">
-            <div class="sp-img-bg">
-                <div class="container-wrapper-header">
-                    <div class="announcement-container" >
-                        <div class="container">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="row">
-                                    <div class="alert alert-info alert-labeled">
-                                        <div class="alert-labeled-row">
-                                            <span class="alert-label alert-label-left alert-labelled-cell"></span>
-                                            <p class="alert-body alert-body-right alert-labelled-cell">
-                                                <span class="announcement-title">Advisory Note</span>
-                                                <br/>
-                                                <span class="announcement-body">
-                                                    Your MockPass account contains a lot of personal data. Do not share your username, password and 2FA details with anyone.
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="mainHeaderContainer container hidden-xs hidden-sm hidden-md">
-                        <div class="mockpass-logo-container pull-left"> <a title="MockPass" aria-label="MockPass" class="mockpass-logo">MockPass</a> </div>
-                        <div class="placeholder-logo-container pull-right hidden-xs">
-                            <a target="_blank" rel="noopener noreferrer" class="placeholder-logo" title="MockPass" aria-label="MockPass">MockPass</a>
-                        </div>
-                        <div class="header-links hidden-xs">
-                            <div class="header-utility pull-left">
-                                <ul>
-                                    <li><a id="font-small" title="Decrease the font size" aria-label="Decrease the font size"><i class="icon font-size font-small-black"></i></a></li>
-                                    <li><a id="font-default" title="Reset the font size" aria-label="Reset the font size"><i class="icon font-size font-default-black"></i></a></li>
-                                    <li><a id="font-large" title="Increase the font size" aria-label="Increase the font size"  ><i class="icon font-size font-large-black"></i></a></li>
-                                    <li><a title="Print this page" aria-label="Print this page"><i class="icon printer-icon-black"></i></a></li>
-                                </ul>
-                            </div>
-                            <ul>
-                                <li class="isicon"><a class="li-links">Contact Us</a></li>|
-                                <li class="isicon"><a class="li-links">Feedback</a></li>|
-                                <li class="isicon"><a class="li-links" >Sitemap</a></li>|
-                                <li class="isicon"><a class="li-links">FAQ</a></li>
-                                <li><a id="searchIcon" title="Search within MockPass" aria-label="Search within MockPass" class="search-icon-black search-form-tigger" data-toggle="search-form"></a></li>
-                            </ul>
-                        </div>
-                        <div class="search-form-wrapper">
-                            <div id="searchFormDiv" class="search-form-div">
-                                <form class="search-form">
-                                    <div class="input-group">
-                                        <input type="text" id="searchtxt" name="search" autocomplete="off" class="search form-control" placeholder="Search">
-                                        <span id="searchFormSubmitBtn" class="input-group-addon" style="font-size: 17px;"><i class="fa fa-search" aria-hidden="true"></i></span>
-                                        <span class="input-group-addon search-close" style="font-size: 19px;"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="mySidenav" class="sidenav hidden-lg">
-                        <a class="closebtn" data-toggle="nav-toggle"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                        <div class="mNavigation_container">
-                            <a class="mNavigation_title">Home</a>
-                            <a class="mNavigation_title">About Us</a>
-                            <div class="mNavigation_title mDropdown">My Account<span class="plusminus">+</span></div>
-                            <div class="mNavigation_body" style="display: none;">
-                                <a class="mNavigation_title">Update Profile</a>
-                                <a class="mNavigation_title">Change Password</a>
-                                <a class="mNavigation_title">View History</a>
-                                <a class="mNavigation_title">Set up 2FA</a>
-                                <a class="mNavigation_title">Visit MyInfo</a>
-                            </div>
-                            <div class="mNavigation_title mDropdown">Services<span class="plusminus">+</span></div>
-                            <div class="mNavigation_body" style="display: none;">
-                                <a class="mNavigation_title">Register for MockPass</a>
-                                <a class="mNavigation_title">Check Status</a>
-                                <a class="mNavigation_title">Reset Password</a>
-                                <a class="mNavigation_title">Forgot MockPass ID</a>
-                            </div>
-                            <a class="mNavigation_title">Help and FAQ</a>
-                            <a class="mNavigation_title">Instructional Guides</a>
-                            <a class="mNavigation_title">Counter Locations</a>
-                            <a class="mNavigation_title">News</a>
-                            <a class="mNavigation_title">Contact Us</a>
-                            <a class="mNavigation_title">Sitemap</a>
-                        </div>
-                    </div>
-                    <div id="mobile-header" class="hidden-lg">
-                        <span style="font-size:30px; cursor:pointer; float:left" data-toggle="nav-toggle"><i class="fa fa-bars" aria-hidden="true"></i></span>
-                        <span class="mobile-mockpass-logo visible-xs visible-xs visible-sm visible-md hidden-lg" title="MockPass" aria-label="MockPass"></span>
-                    </div>
-                </div>
-                <div class="container-wrapper-navigator">
-                    <div class="container-navigator">
-                        <nav class="navbar sidebar hidden-xs hidden-sm hidden-md visible-lg" role="navigation">
-                            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                                <ul class="nav navbar-nav">
-                                    <li class="aboutuslist sidebarlist"><a class="listtitle" title="About MockPass" aria-label="About MockPass" >About Us<span  class="hidden-xs showopacity sidebar-aboutusIcon"></span></a></li>
-                                    <li class="faqlist sidebarlist"><a class="listtitle" title="Frequently Asked Questions (FAQ)" aria-label="Frequently Asked Questions (FAQ)" >FAQ<span  class=" hidden-xs showopacity sidebar-faqIcon"></span></a></li>
-                                    <li class="instructvideolist sidebarlist"><a class="listtitle" title="Instructional Guides for MockPass" aria-label="Instructional Guides for MockPass"  >Instructional Guides<span class="hidden-xs showopacity sidebar-videoIcon"></span></a></li>
-                                    <li class="counterlocationlist sidebarlist"><a class="listtitle" title="MockPass Counter Locations" aria-label="MockPass Counter Locations"  >Counter Locations<span  class="hidden-xs showopacity sidebar-counterlocationIcon"></span></a></li>
-                                    <li class="newslist sidebarlist"><a class="listtitle" title="News about MockPass" aria-label="News about MockPass"  >News<span  class="hidden-xs showopacity  sidebar-newsIcon"></span></a></li>
-                                    <li class="contactuslist sidebarlist"><a class="listtitle" title="Contact MockPass" aria-label="Contact MockPass"  >Contact Us<span  class="hidden-xs showopacity  sidebar-contactusIcon"></span></a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <div class="page-content">
-                    <div class="homepagebody-container">
-                        <div class="loginbtn-container visible-xs visible-sm visible-md">
-                            <div class="login-button">
-                                <button id="loginModelbtn" class="btn btn-primary btn-lg btn-login" data-toggle="modal" data-target="#myModalHorizontal" onclick="showLoadTab()">Login  <i class="fa fa-lock" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                        <div class="container visible-lg">
-                            <div class="login-button">
-                                <button id="loginModelbtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal" onclick="showLoadTab()">Login  <i class="fa fa-lock" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                        <div id="myModalHorizontal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="homepageLogin modal-dialog">
-                                <div class="login-modal-content" style="overflow: visible">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MockPass Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/mockpass/resources/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/mockpass/resources/js/login-common.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.5;
+        }
+        /* Top Banner */
+        .sg-banner {
+            background-color: #f0f0f0;
+            padding: 8px 24px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        /* Main Header */
+        .header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #d11241;
+            letter-spacing: -0.5px;
+        }
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            gap: 60px;
+            padding: 0 40px;
+            min-height: calc(100vh - 250px);
+        }
+        .left-col {
+            flex: 1;
+            padding-top: 20px;
+        }
+        .announcement {
+            margin-bottom: 40px;
+        }
+        .announcement h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .announcement h2::after {
+            content: '^';
+            color: #d11241;
+            transform: rotate(180deg);
+            display: inline-block;
+            font-size: 20px;
+        }
+        .announcement p {
+            color: #555;
+        }
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-top: 60px;
+        }
+        .mascot {
+            width: 80px;
+            height: 80px;
+            background-color: #d11241;
+            border-radius: 50%;
+            position: relative;
+        }
+        /* Simple CSS mascot shape */
+        .mascot::before {
+            content: '';
+            position: absolute;
+            top: 20%; left: 20%; right: 20%; bottom: 40%;
+            background: #fff;
+            border-radius: 50%;
+        }
+        .hero-text h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .hero-text p {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        /* Right Col / Login Card */
+        .right-col {
+            width: 420px;
+            flex-shrink: 0;
+        }
+        .login-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .tab {
+            flex: 1;
+            padding: 20px 0;
+            text-align: center;
+            font-weight: 600;
+            cursor: pointer;
+            color: #888;
+            background: #fdfdfd;
+        }
+        .tab.active {
+            color: #d11241;
+            background: #ffffff;
+            border-bottom: 2px solid #d11241;
+        }
+        .card-content {
+            padding: 40px;
+            text-align: center;
+        }
+        .card-content h3 {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .login-dropdown {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+            margin-bottom: 30px;
+        }
+        .login-dropdown:focus {
+            border-color: #d11241;
+        }
+        .qr-placeholder {
+            border: 2px solid #d11241;
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            display: block;
+            position: relative;
+        }
+        .qr-placeholder::after {
+            content: "mockpass";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 0 10px;
+            color: #d11241;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .card-footer {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eaeaea;
+        }
+        .card-footer a {
+            display: block;
+            color: #0056b3;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        .card-footer a:last-child {
+            margin-bottom: 0;
+        }
+        .card-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Custom Profile Form */
+        .custom-profile-form {
+            display: none;
+            text-align: left;
+        }
+        .custom-profile-form label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            margin-top: 16px;
+        }
+        .custom-profile-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .custom-profile-form button {
+            margin-top: 24px;
+            width: 100%;
+            padding: 12px;
+            background: #d11241;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .custom-profile-form button:hover {
+            background: #b00f36;
+        }
 
-                                    <div class="login-form-body">
-                                        <span id="sp-mobile-tooltip" class="sp-mobile-tooltip ani-rotate">Click here to log in with MockPass Mobile app</span>
-                                        <ul class="final-login">
-                                            <li id="loginli" class="logintab active">
-                                                <a title="Login" aria-label="Login" data-toggle="tab" href="#sectionA"></a>
-                                            </li>
-                                            <li id="qrcodeloginli" class="qrtab">
-                                                <a title="MockPass Mobile" aria-label="MockPass Mobile"></a>
-                                            </li>
-                                        </ul>
-                                        <div class="white-area"></div>
-                                        <div class="tab-content">
-                                            <div id="sectionA" class="tab-pane fade in active">
-                                                <div class="innter-form">
-                                                    <form id="login" name="LoginForm" class="innate-form" method="post">
-                                                        <div id="LoginForm">
-                                                            <div class="login-label">Log in</div>
-                                                            <br>
-                                                            <div class="dropdown" style="width: 100%; ">
-                                                                <input id="id-input" list="id-datalist" class="btn btn-secondary dropdown-toggle" oninput="redirectID()" placeholder= "Select Username" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
-                                                                <datalist class="dropdown-menu" id="id-datalist" aria-labelledby="id-input" >
-                                                                    {{#values}}
-                                                                        <option value="{{ id }}" data-asserturl="{{ assertURL }}">{{ id }}</option>
-                                                                    {{/values}}
-                                                                </datalist>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <input type="hidden" name="CSRFToken" value="null" />
-                                                        </div>
-                                                    </form>
-                                                    {{#customProfileConfig}}
-                                                    <form action="{{endpoint}}" class="innate-form" method="get">
-                                                        <br>
-                                                        <h6>or with your own user</h6>
-                                                        <br>
+        /* Footer */
+        .footer {
+            background-color: #222222;
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin-right: 12px;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        /* Background pattern (subtle circles) */
+        .bg-pattern {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            opacity: 0.03;
+            background-image: radial-gradient(circle at 20px 20px, #000 2px, transparent 0);
+            background-size: 40px 40px;
+        }
+        
+        @media (max-width: 900px) {
+            .main-container { flex-direction: column; }
+            .right-col { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <div class="sg-banner">
+        <span><span style="color:#d11241; margin-right:5px;">🦁</span> A Singapore Government Agency Website <a href="#" style="color:#0056b3; margin-left: 5px; text-decoration: none;">How to identify ⌄</a></span>
+    </div>
 
-                                                        <label for="nric">NRIC</label>
-                                                        <input type="text" name="nric" id="nric" value="S1234567A" minlength="9" maxlength="9">
+    <div class="header">
+        <div class="logo">mockpass</div>
+    </div>
 
-                                                        {{#showUuid}}
-                                                        <label for="uuid">UUID</label>
-                                                        <input type="text" name="uuid" id="uuid" value="ef39a074-b64d-4990-a937-6f80772e2bb8" minlength="36" maxlength="36">
-                                                        {{/showUuid}}
-
-                                                        {{#showUen}}
-                                                        <label for="uen">UEN</label>
-                                                        <input type="text" name="uen" id="uen" value="123456789D" minlength="9" maxlength="10">
-                                                        {{/showUen}}
-
-                                                        {{#assertEndpoint}}<input type="hidden" name="assertEndpoint" value="{{ assertEndpoint }}" />{{/assertEndpoint}}
-                                                        {{#requestUri}}<input type="hidden" name="request_uri" value="{{ requestUri }}" />{{/requestUri}}
-                                                        {{#redirectURI}}<input type="hidden" name="redirectURI" value="{{ redirectURI }}" />{{/redirectURI}}
-                                                        {{#relayState}}<input type="hidden" name="relayState" value="{{ relayState }}" />{{/relayState}}
-                                                        {{#state}}<input type="hidden" name="state" value="{{ state }}" />{{/state}}
-                                                        {{#nonce}}<input type="hidden" name="nonce" value="{{ nonce }}" />{{/nonce}}
-
-                                                        <button autofocus="" type="submit">Login</button>
-                                                        <br>
-                                                    </form>
-                                                    {{/customProfileConfig}}
-                                                    <br>
-                                                    <div class="login__footer">
-                                                        <div class="login-note">
-                                                            Forgot <a aria-label="Forgot MockPass ID">MockPass ID</a> or <a aria-label="Forgot password">password</a>?
-                                                        </div>
-                                                        <div class="sp-reglink">
-                                                            Don't have an account? <a aria-label="Register now">Register now</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="main-container">
+        <div class="left-col">
+            <div class="announcement">
+                <h2>We're upgrading your login experience</h2>
+                <p>Coming soon: a faster, safer login on iOS, and a fresh new look for everyone.</p>
             </div>
-            <div class="carousel-container">
-                <div class="container">
-                    <div id="Carousel" class="carousel slide">
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3"><a class="thumbnail regsp-icon" title="Register for a MockPass account" aria-label="Register for a MockPass account"></a></div>
-                                <div class="col-xs-4 col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail updateAcctDetails-icon" title="Update your MockPass account details" aria-label="Update your MockPass account details" data-toggle="modal" data-target="#myModalHorizontal" ></a></div>
-                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3"><a class="thumbnail resetpwd-icon" title="Reset your MockPass password" aria-label="Reset your MockPass password"></a></div>
-                                <div class="hidden-xs col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail setUp2Step2FA-icon" title="Set up your MockPass Two-Factor Authentication (2FA)" aria-label="Set up your MockPass Two-Factor Authentication (2FA)" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
-                            </div>
-                            <div class="item">
-                                <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a class="thumbnail setUp2Step2FA-icon" title="Set up your MockPass Two-Factor Authentication (2FA)" aria-label="Set up your MockPass Two-Factor Authentication (2FA)" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
-                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3"><a title="Check your MockPass application status" aria-label="Check your MockPass application status" class="thumbnail checkapplication-icon"></a></div>
-                                <div class="col-xs-4 col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail changePwd-icon" title="Change your MockPass password" aria-label="Change your MockPass password" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
-                                <div class="hidden-xs col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail viewTransactionHistory-icon" title="View your MockPass transaction history" aria-label="View your MockPass transaction history" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
-                                <div class="hidden-xs col-sm-3 col-sm-3 col-lg-3"><a class="thumbnail myinfo-icon" title="Visit MyInfo Portal" aria-label="Visit MyInfo Portal"></a></div>
-                            </div>
-                            <div class="item">
-                                <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a class="thumbnail viewTransactionHistory-icon" title="View your MockPass transaction history" aria-label="View your MockPass transaction history" data-toggle="modal" data-target="#myModalHorizontal"></a></div>
-                                <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a title="Visit MyInfo Portal" aria-label="Visit MyInfo Portal" class="thumbnail myinfo-icon"></a></div>
-                                <div class="col-xs-4 col-sm-12 col-md-12 col-lg-12"><a class="thumbnail retrieveid-icon" title="Retrieve your MockPass user ID" aria-label="Retrieve your MockPass user ID"></a></div>
-                            </div>
-                        </div>
-                        <!-- carousel-control -->
-                        <a title="Carousel previous" aria-label="Carousel previous" data-slide="prev" class="left carousel-control glyphicon glyphicon-triangle-left"></a>
-                        <a title="Carousel next" aria-label="Carousel next" data-slide="next" class="right carousel-control glyphicon glyphicon-triangle-right"></a>
-
-                        <ol class="carousel-indicators">
-                            <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#Carousel" data-slide-to="1"></li>
-                            <li data-target="#Carousel" data-slide-to="2"></li>
-                        </ol>
-                    </div>
+            
+            <div class="hero-section">
+                <div class="mascot"></div>
+                <div class="hero-text">
+                    <h1>Log in with mockpass</h1>
+                    <p>Your trusted digital identity</p>
                 </div>
-            </div>
-            <div class="container-wrapper-footer">
-            <div class="container">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="footer-terms-condition"> <a>Privacy Statement</a> | <a>Terms of Use</a> | <a>Rate This Website</a> </div>
-                </div>
-                <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
-                    <div class="footer-copyright">Last updated on 13 January 2019 &nbsp; &nbsp; &#169; &nbsp;2018 MockPass</div>
-                </div>
-                <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
-                    <div class="footer-copyright">Last updated on 13 January 2019</div>
-                </div>
-                <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
-                    <div class="footer-copyright">&#169; &nbsp;2018 MockPass</div>
-                </div>
-            </div>
             </div>
         </div>
-    </body>
+
+        <div class="right-col">
+            <div class="login-card">
+                <div class="tabs">
+                    <div class="tab" id="tab-mockpass" onclick="switchTab('mockpass')">Singpass app</div>
+                    <div class="tab active" id="tab-custom" onclick="switchTab('custom')">Password login</div>
+                </div>
+                
+                <div class="card-content">
+                    <!-- Standard Mockpass Login -->
+                    <div id="view-mockpass" style="display: none;">
+                        <h3>Select with Mockpass app<br>to log in</h3>
+                        <div class="qr-placeholder">
+                            <input id="id-input" list="id-datalist" class="login-dropdown" oninput="redirectID()" placeholder="Select Username">
+                            <datalist id="id-datalist">
+                                {{#values}}
+                                    <option value="{{ id }}" data-asserturl="{{ assertURL }}">{{ id }}</option>
+                                {{/values}}
+                            </datalist>
+                        </div>
+                    </div>
+
+                    <!-- Custom Profile Form -->
+                    <div id="view-custom" class="custom-profile-form" style="display: block;">
+                        <h3 style="margin-bottom: 20px; text-align: left; color: #000; font-weight: 700;">Log in</h3>
+                        {{#customProfileConfig}}
+                        <form action="{{endpoint}}" method="get">
+                            <input type="text" name="nric" id="nric" placeholder="Singpass ID" value="S1234567A" minlength="9" maxlength="9" required style="margin-bottom: 15px; padding: 14px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+
+                            {{#showPassword}}
+                            <div style="position: relative;">
+                                <input type="password" name="password" id="password" placeholder="Password" value="ef39a074-b64d-4990-a937-6f80772e2bb8" required style="margin-bottom: 15px; padding: 14px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; width: 100%;">
+                                <span id="toggle-pwd-icon" onclick="togglePasswordVisibility()" style="position: absolute; right: 15px; top: 15px; cursor: pointer; color: #666; font-size: 20px; user-select: none;">👁</span>
+                            </div>
+                            {{/showPassword}}
+
+                            {{#showUen}}
+                            <input type="text" name="uen" id="uen" placeholder="UEN" value="123456789D" minlength="9" maxlength="10" required style="margin-bottom: 15px; padding: 14px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+                            {{/showUen}}
+
+                            {{#assertEndpoint}}<input type="hidden" name="assertEndpoint" value="{{ assertEndpoint }}" />{{/assertEndpoint}}
+                            {{#requestUri}}<input type="hidden" name="request_uri" value="{{ requestUri }}" />{{/requestUri}}
+                            {{#redirectURI}}<input type="hidden" name="redirectURI" value="{{ redirectURI }}" />{{/redirectURI}}
+                            {{#relayState}}<input type="hidden" name="relayState" value="{{ relayState }}" />{{/relayState}}
+                            {{#state}}<input type="hidden" name="state" value="{{ state }}" />{{/state}}
+                            {{#nonce}}<input type="hidden" name="nonce" value="{{ nonce }}" />{{/nonce}}
+
+                            <button type="submit" style="background: #d11241; border-radius: 4px; padding: 14px; font-size: 18px; margin-top: 10px; margin-bottom: 20px;">Log in</button>
+                        </form>
+                        {{/customProfileConfig}}
+                        {{^customProfileConfig}}
+                            <p style="color: #666; text-align: center; margin-top: 20px;">Custom profile not configured for this endpoint.</p>
+                        {{/customProfileConfig}}
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
+                            <a href="#" style="color: #0000ee; text-decoration: underline; font-size: 14px;">Retrieve Singpass ID</a>
+                            <a href="#" style="color: #0000ee; text-decoration: underline; font-size: 14px;">Reset password</a>
+                        </div>
+                        
+                        <hr style="border: 0; border-top: 1px solid #ccc; margin-bottom: 20px;">
+                        
+                        <button type="button" style="width: 100%; background: #fff; color: #555; border: 1px solid #ccc; border-radius: 4px; padding: 14px; font-size: 16px; font-weight: 600; cursor: pointer;">Register for Singpass</button>
+                    </div>
+                </div>
+                
+                <div class="card-footer" style="display: none;">
+                    <a href="#">Register for Mockpass</a>
+                    <a href="#">Download Mockpass app</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>
+            <div class="footer-logo">mockpass</div>
+            <div style="margin-bottom: 10px;">
+                <a href="#">Contact us</a> | <a href="#">Share feedback</a> | <a href="#">Read FAQs</a>
+            </div>
+            <div>
+                <a href="#">Report vulnerability</a> | <a href="#">Privacy statement</a> | <a href="#">Terms of use</a> | <a href="#">Sitemap</a>
+            </div>
+        </div>
+        <div style="text-align: right; color: #888;">
+            © Government of Singapore<br>Last updated 24 July 2025
+        </div>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            const pwdInput = document.getElementById('password');
+            const pwdIcon = document.getElementById('toggle-pwd-icon');
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                pwdIcon.style.opacity = '0.5';
+            } else {
+                pwdInput.type = 'password';
+                pwdIcon.style.opacity = '1';
+            }
+        }
+
+        function switchTab(tab) {
+            document.getElementById('tab-mockpass').classList.remove('active');
+            document.getElementById('tab-custom').classList.remove('active');
+            document.getElementById('view-mockpass').style.display = 'none';
+            document.getElementById('view-custom').style.display = 'none';
+            
+            document.getElementById('tab-' + tab).classList.add('active');
+            if (tab === 'mockpass') {
+                document.getElementById('view-mockpass').style.display = 'block';
+            } else {
+                document.getElementById('view-custom').style.display = 'block';
+            }
+        }
+    </script>
+</body>
 </html>

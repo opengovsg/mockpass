@@ -36,6 +36,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
+    "@opengovsg/mockpass": "^4.6.7",
     "base-64": "^1.0.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^17.2.0",
@@ -66,7 +67,8 @@
     "lint-staged": "^16.2.6",
     "nodemon": "^3.0.1",
     "pinst": "^3.0.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "xlsx": "^0.18.5"
   },
   "lint-staged": {
     "**/*.(js|jsx|ts|tsx)": [

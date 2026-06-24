@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockpass - Persona Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="glass-header">
+      <div class="logo">
+        <div class="logo-icon">M</div>
+        <h1>MockPass Admin</h1>
+      </div>
+      <p class="subtitle">Configure Dynamic Personas for Singpass/MyInfo Testing</p>
+    </header>
+
+    <main class="main-content">
+      <section class="personas-list-section glass-panel">
+        <div class="section-header">
+          <h2>Custom Personas</h2>
+          <button id="btn-refresh" class="btn-secondary">Refresh List</button>
+        </div>
+        <div class="table-container">
+          <table id="personas-table">
+            <thead>
+              <tr>
+                <th>NRIC</th>
+                <th>Name</th>
+                <th>Nationality</th>
+                <th>Age Config</th>
+                <th>Income (L - H)</th>
+              </tr>
+            </thead>
+            <tbody id="personas-tbody">
+              <!-- Data will be injected here -->
+            </tbody>
+          </table>
+          <div id="loading-indicator" class="loading">Loading personas...</div>
+          <div id="empty-state" class="empty-state hidden">No custom personas found. Create one below.</div>
+        </div>
+      </section>
+
+      <section class="persona-form-section glass-panel">
+        <div class="section-header">
+          <h2>Create / Edit Persona</h2>
+        </div>
+        <form id="persona-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nric">NRIC (e.g. S_TEST_AGE_16)</label>
+              <input type="text" id="nric" name="nric" required placeholder="S_TEST_AGE_16">
+            </div>
+            
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required placeholder="Mock User">
+            </div>
+
+            <div class="form-group">
+              <label for="nationality">Nationality (Code)</label>
+              <select id="nationality" name="nationality">
+                <option value="SG">Singapore Citizen (SG)</option>
+                <option value="PR">Permanent Resident (PR)</option>
+                <option value="MY">Malaysian (MY)</option>
+                <option value="US">American (US)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ageConfig">Age Configuration</label>
+              <select id="ageConfig" name="ageConfig">
+                <option value="dynamic">Dynamic Age (Auto-calculate DOB)</option>
+                <option value="fixed">Fixed Date of Birth</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="dynamicAgeGroup">
+              <label for="dynamicAge">Target Age (Years)</label>
+              <input type="number" id="dynamicAge" name="dynamicAge" value="16" min="0" max="150">
+              <small class="hint">DOB will be calculated relative to today.</small>
+            </div>
+
+            <div class="form-group hidden" id="fixedDobGroup">
+              <label for="fixedDob">Date of Birth</label>
+              <input type="date" id="fixedDob" name="fixedDob" value="2000-01-01">
+            </div>
+
+            <div class="form-group">
+              <label for="incomeLow">Household Income (Low)</label>
+              <input type="number" id="incomeLow" name="incomeLow" value="0">
+            </div>
+
+            <div class="form-group">
+              <label for="incomeHigh">Household Income (High)</label>
+              <input type="number" id="incomeHigh" name="incomeHigh" value="5000">
+            </div>
+            
+            <div class="form-group">
+              <label for="schoolName">School Name (e.g. Test Secondary School)</label>
+              <input type="text" id="schoolName" name="schoolName" value="">
+            </div>
+
+            <div class="form-group">
+              <label for="eduLevel">Education Level</label>
+              <select id="eduLevel" name="eduLevel">
+                <option value="">None / NA</option>
+                <option value="1">Primary</option>
+                <option value="2">Secondary</option>
+                <option value="3">Post-Secondary</option>
+                <option value="4">University</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="maritalStatus">Marital Status</label>
+              <select id="maritalStatus" name="maritalStatus">
+                <option value="1">Single</option>
+                <option value="2">Married</option>
+                <option value="3">Widowed</option>
+                <option value="4">Divorced</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="noOfChildren">Number of Children</label>
+              <input type="number" id="noOfChildren" name="noOfChildren" value="0" min="0">
+            </div>
+
+            <div class="form-group full-width">
+              <label for="regAdd">Registered Address</label>
+              <input type="text" id="regAdd" name="regAdd" value="10 Test Street, Singapore 123456">
+            </div>
+
+            <div class="form-group">
+              <label for="mobileNo">Mobile Number</label>
+              <input type="text" id="mobileNo" name="mobileNo" value="91234567">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" value="test@example.com">
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="password">Login Password UUID</label>
+              <input type="text" id="password" name="password" value="" placeholder="Leave blank to auto-generate">
+              <small class="hint">Used for Singpass OIDC login. Leave blank to generate a random UUID.</small>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" id="btn-save">Save Persona</button>
+            <div id="save-status" class="status-msg"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
