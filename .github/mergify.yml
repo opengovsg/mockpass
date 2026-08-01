@@ -4,7 +4,7 @@ pull_request_rules:
       - 'author=dependabot[bot]'
       - 'check-success~=CI'
       - 'title~=bump [^\s]+ from ([\d]+)\..+ to \1\.'
-      - 'base=dependabot'
+      - 'base=deps'
     actions:
       review:
         type: APPROVE
