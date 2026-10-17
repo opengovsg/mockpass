@@ -5408,7 +5408,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -5457,7 +5468,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": false
+              }
+            }
+          ]
         }
       ],
       "drivinglicence": {
@@ -6537,7 +6559,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -6586,7 +6619,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": false
+              }
+            }
+          ]
         }
       ],
       "drivinglicence": {
@@ -10988,7 +11032,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         }
       ],
       "drivinglicence": {
@@ -13513,7 +13568,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -13562,7 +13628,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": false
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -18078,7 +18155,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -18127,7 +18215,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": false
+              }
+            }
+          ]
         }
       ],
       "drivinglicence": {
@@ -20444,7 +20543,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -20493,7 +20603,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": false
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -22742,7 +22863,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -22791,7 +22923,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": false
+              }
+            }
+          ]
         }
       ],
       "drivinglicence": {
@@ -23871,7 +24014,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": true
+              }
+            }
+          ]
         },
         {
           "dialect": {
@@ -23920,7 +24074,18 @@
           "secondaryrace": {
             "code": "",
             "desc": ""
-          }
+          },
+          "vaccinationrequirements": [
+            {
+              "requirement": {
+                "code": "1M3D",
+                "desc": "Minimum 1 dose of MMR and 3 doses of DTaP"
+              },
+              "fulfilled": {
+                "value": false
+              }
+            }
+          ]
         },
         {
           "dialect": {
