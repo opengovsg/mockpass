@@ -28,6 +28,25 @@ Configure your endpoint to point to the following endpoints:
 - http://localhost:5156/singpass/v3/fapi/token
 - http://localhost:5156/singpass/v3/fapi/userinfo
 
+### Corppass v3 (FAPI flow)
+
+Configure your endpoint to point to the following endpoints:
+
+- http://localhost:5156/corppass/v3/fapi/.well-known/openid-configuration
+- http://localhost:5156/corppass/v3/fapi/.well-known/keys
+- http://localhost:5156/corppass/v3/fapi/par
+- http://localhost:5156/corppass/v3/fapi/auth
+- http://localhost:5156/corppass/v3/fapi/token
+- http://localhost:5156/corppass/v3/fapi/userinfo
+
+The Corppass `id_token` follows the FAPI 2.0 specification with `sub` set to the entity's UEN, `sub_type: 'entity'`, `sub_attributes` (entity registration number, country of incorporation, and type), and `act` (representing the acting user: `sub`, `sub_type: 'user'`, and `sub_attributes` containing identity number, account type, and name).
+
+The Corppass `/userinfo` endpoint returns a signed-then-encrypted JWE containing the `auth_info` payload per CorpPass AuthInfo specification (`Result_Set` -> `ESrvc_Result` -> `Auth_Result_Set` -> `Row`). You can optionally configure defaults via environment variables:
+- `MOCKPASS_CORPPASS_ESRVCID`: Digital service ID (default: `MOCK_CP_ESRVC_ID`).
+- `MOCKPASS_CORPPASS_ROLE`: User role for the entity (default: `MOCK_USER`).
+
+In the custom profile authorization endpoint (`/corppass/v3/fapi/auth/custom-profile`), you can pass `uen`, `sub_uen`, and `cp_role` query parameters to override the profile for non-interactive automated testing.
+
 In the `/fapi/utils.js file`, you can configure your client JWKS endpoint in the `fapiClientConfiguration`. By default, it is set to `null` and Mockpass will read the default keys that are stored in the `fapi-rp-private.json` and `fapi-rp-public.json` files. If configured, Mockpass will attempt to fetch the JWKS from the specified endpoint.
 Your JWKS endpoint will need to be publicly accessible, and it needs to contain a valid JWKS with a `sig` key and an `enc` key.
 
@@ -35,7 +54,7 @@ Limitations:
 
 - `client_id` and `redirect_uri` can be set to anything.
 - Mockpass will not check if ephemeral keys, state, and nonce are reused.
-- `scope` accepts `openid`, `user.identity`, and any basic MyInfo attribute (`uinfin`, `name`, `dob`, `regadd`, ...)
+- `scope` for Singpass accepts `openid`, `user.identity`, and any basic MyInfo attribute (`uinfin`, `name`, `dob`, `regadd`, ...). `scope` for Corppass accepts `openid`, `user.identity`, `entity.identity`, and `authinfo`.
 - Only `urn:singpass:authentication:loa:1` is supported for the `acr_values` parameter.
 
 ### Userinfo (MyInfo apps only)
